@@ -1,0 +1,51 @@
+/* HOME PAGE STYLES START */
+#home {
+    text-align: center;
+}
+
+#heading {
+    color: #000000;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 150px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.button {
+  appearance: none;
+  background-color: #1d4999;
+  border: 1px solid rgba(33, 67, 179, 0.15);
+  border-radius: 10px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  width: 150px;
+  height: 45px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  margin: 3px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: #183c80;
+}
+
+.button:active {
+  background-color: #143168;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+/* HOME PAGE STYLES END */

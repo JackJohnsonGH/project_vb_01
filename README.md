@@ -14,7 +14,7 @@ The previous song stops and the new song plays
 WHEN I click on pause/play
 THEN the song stops/starts as requested
 WHEN I click on 'choose another mood'
-THEN I am taken back to the selction of moods
+THEN I am taken back to the selection of moods
 
 This will be a webpage that allows users to pick from a series of moods displayed on the home page. There will also be an option to pick a random mood.
 
