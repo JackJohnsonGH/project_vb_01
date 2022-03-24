@@ -42,13 +42,12 @@ function getPic1() {
       return response.json();
     })
     .then(function (data) {
-      var stockPic = document.querySelector(".card").style.backgroudImage;
+      //   var stockPic = document.querySelector("#card1").style.backgroudImage;
       var picContent = document.querySelector("#card-content1");
       var pic = document.createElement("img");
       pic.src = data.avatar.large;
       picContent.append(pic);
-      //   document.querySelector(".card").style.backgroudImage =
-      //     "url(" + data.avatar.large + ")";
+      //   document.body.style.backgroudImage = "url(" + data.avatar.large + ")";
       //   document.querySelector(".card").style.backgroudSize = "cover";
       getDets1();
     });
