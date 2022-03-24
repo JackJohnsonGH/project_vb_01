@@ -59,29 +59,13 @@ function getDets() {
     });
 }
 
-var music;
-
-function switchPlayer() {
-  var sounds = document.getElementsByTagName("audio");
-  sounds.pause();
-  fetch(playUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      music = new Audio(data.previews["preview-hq-mp3"]);
-
-      if (music.paused) {
-        music.play();
-        playBtn.innerText = "Pause";
-        console.log(music.paused);
-      } else {
-        console.log("pause");
-        music.pause();
-        playBtn.innerText = "Play";
-      }
-    });
-}
+fetch(playUrl)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music = new Audio(data.previews["preview-hq-mp3"]);
+  });
 
 function playMusic() {
   console.log("play");
@@ -91,7 +75,21 @@ function playMusic() {
     })
     .then(function (data) {
       console.log(data);
-      switchPlayer();
+      if (music.paused) {
+        music.play();
+        playBtn.innerText = "Pause";
+        console.log(music.paused);
+      } else {
+        console.log("pause");
+        music.pause();
+        playBtn.innerText = "Play";
+      }
+      music.onplaying = function () {
+        isPlaying = true;
+      };
+      music.onpause = function () {
+        isPlaying = false;
+      };
     });
 }
 
