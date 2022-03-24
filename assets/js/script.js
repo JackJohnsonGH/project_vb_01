@@ -1,25 +1,37 @@
 var happy = document.querySelector("#happy");
 var playBtn1 = document.querySelector("#button1");
 var playBtn2 = document.querySelector("#button2");
-// var detailsBtn = document.querySelector(".");
+var playBtn3 = document.querySelector("#button3");
+var playBtn4 = document.querySelector("#button4");
+var playBtn5 = document.querySelector("#button5");
 var title1 = document.querySelector("#card-title1");
 var cardBody1 = document.querySelector("#card-body1");
 var cardGenre1 = document.querySelector("#card-genre1");
 var cardContainer = document.querySelector(".card-container");
 var userUrl = "https://freesound.org/apiv2/users/";
-var apiUrl1 =
-  "https://freesound.org/apiv2/sounds/560446/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
-var apiUrl2 =
-  "https://freesound.org/apiv2/sounds/609562/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+
 var picUrl1 =
   "https://freesound.org/apiv2/users/Migfus20/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var picUrl2 =
   "https://freesound.org/apiv2/users/Migfus20/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var picUrl3 =
+  "https://freesound.org/apiv2/users/InspectorJ/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var picUrl4 =
+  "https://freesound.org/apiv2/users/edtijo/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var picUrl5 =
+  "https://freesound.org/apiv2/users/cabled_mess/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 
 var playUrl1 =
   "https://freesound.org/apiv2/sounds/560446/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var playUrl2 =
   "https://freesound.org/apiv2/sounds/609562/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var playUrl3 =
+  "https://freesound.org/apiv2/sounds/411165/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var playUrl4 =
+  "https://freesound.org/apiv2/sounds/240376/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var playUrl5 =
+  "https://freesound.org/apiv2/sounds/335361/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+
 var apiKey = "WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var testUrl =
   "https://freesound.org/apiv2/search/text/?query=happy&token=" + apiKey;
@@ -35,15 +47,15 @@ function getPic1() {
       var pic = document.createElement("img");
       pic.src = data.avatar.large;
       picContent.append(pic);
-      document.querySelector(".card").style.backgroudImage =
-        "url(" + data.avatar.large + ")";
-      document.querySelector(".card").style.backgroudSize = "cover";
+      //   document.querySelector(".card").style.backgroudImage =
+      //     "url(" + data.avatar.large + ")";
+      //   document.querySelector(".card").style.backgroudSize = "cover";
       getDets1();
     });
 }
 
 function getDets1() {
-  fetch(apiUrl1)
+  fetch(playUrl1)
     .then(function (response) {
       return response.json();
     })
@@ -69,7 +81,7 @@ function getPic2() {
     });
 }
 function getDets2() {
-  fetch(apiUrl2)
+  fetch(playUrl2)
     .then(function (response) {
       return response.json();
     })
@@ -78,6 +90,93 @@ function getDets2() {
       document.querySelector("#card-body2").textContent =
         "Artist: " + data.username;
       document.querySelector("#card-genre2").textContent =
+        "Genre: " + data.tags[0];
+      getPic3();
+    });
+}
+
+function getPic3() {
+  fetch(picUrl3)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content3");
+      var pic = document.createElement("img");
+      pic.src = data.avatar.large;
+      picContent.append(pic);
+      getDets3();
+    });
+}
+
+function getDets3() {
+  fetch(playUrl3)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title3").textContent = data.name;
+      document.querySelector("#card-body3").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre3").textContent =
+        "Genre: " + data.tags[0];
+      getPic4();
+    });
+}
+
+function getPic4() {
+  fetch(picUrl4)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content4");
+      var pic = document.createElement("img");
+      pic.src = data.avatar.large;
+      picContent.append(pic);
+      getDets4();
+    });
+}
+
+function getDets4() {
+  fetch(playUrl4)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title4").textContent = data.name;
+      document.querySelector("#card-body4").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre4").textContent =
+        "Genre: " + data.tags[0];
+      getPic5();
+    });
+}
+
+function getPic5() {
+  fetch(picUrl5)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content5");
+      var pic = document.createElement("img");
+      pic.src = data.avatar.large;
+      picContent.append(pic);
+      getDets5();
+    });
+}
+
+function getDets5() {
+  fetch(playUrl5)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title5").textContent = data.name;
+      document.querySelector("#card-body5").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre5").textContent =
         "Genre: " + data.tags[0];
     });
 }
@@ -139,74 +238,86 @@ function playMusic2() {
       }
     });
 }
-// function similarSounds() {
-//   console.log("similar");
-//   fetch(playUrl)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       fetch(data.similar_sounds + "?token=" + apiKey)
-//         .then(function (response) {
-//           return response.json();
-//         })
-//         .then(function (data) {
-//           console.log(data);
 
-//         //   for (var i = 1; i < 5; i++) {
-//         //     var card = document.createElement("div");
-//         //     card.classList = "card";
-//         //     var titleH2 = document.createElement("h2");
-//         //     titleH2.classList = "card-title";
-//         //     var cardBodyLoop = document.createElement("p");
-//         //     cardBodyLoop.classList = "card-body";
-//         //     titleH2.textContent = data.results[i].name;
-//         //     cardBodyLoop.textContent = "Artist: " + data.results[i].username;
-//         //     var cardGenreLoop = document.createElement("p");
-//         //     cardGenreLoop.classList = "card-genre";
-//         //     cardGenreLoop.textContent = "Genre: " + data.results[i].tags[0];
-//         //     cardContainer.append(card);
-//         //     card.append(titleH2);
-//         //     titleH2.append(cardBodyLoop);
-//         //     cardBodyLoop.append(cardGenreLoop);
+// THIRD SONG
+fetch(playUrl3)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music3 = new Audio(data.previews["preview-hq-mp3"]);
+  });
 
-//             // fetch(userUrl + data.results[i].username + "/?token=" + apiKey)
-//             //   .then(function (response) {
-//             //     return response.json();
-//             //   })
-//             //   .then(function (data) {
-//             //     var card = document.createElement("div");
-//             //     card.classList = "card";
-//             //     var avatar = document.createElement("img");
-//             //     avatar.src = data.avatar.large;
-//             //     cardContainer.append(card);
-//             //     card.append(avatar);
-//             //   });
+function playMusic3() {
+  fetch(playUrl3)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music3.paused) {
+        music3.play();
+        playBtn3.innerText = "Pause";
+      } else {
+        music3.pause();
+        playBtn3.innerText = "Play";
+      }
+    });
+}
 
-//             // var card = document.createElement("div");
-//             // card.classList = "card";
-//             // var titleH2 = document.createElement("h2");
-//             // titleH2.textContent = data.results[i].name;
-//             // cardContainer.append(title);
+// FOURTH SONG
+fetch(playUrl4)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music4 = new Audio(data.previews["preview-hq-mp3"]);
+  });
 
-//             // var list = document.querySelector(".list");
-//             // var fact = document.createElement("li");
-//             // var fact2 = document.createElement("li");
-//             // var fact3 = document.createElement("li");
-//             // var blank = document.createElement("li");
-//             // fact.textContent = data.results[i].username;
-//             // fact2.textContent = data.results[i].name;
-//             // fact3.textContent = data.results[i].tags[0];
-//             // list.append(fact);
-//             // list.append(fact2);
-//             // list.append(fact3);
-//             // list.append(blank);
-//           }
-//         });
-//     });
-// }
+function playMusic4() {
+  fetch(playUrl4)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music4.paused) {
+        music4.play();
+        playBtn4.innerText = "Pause";
+      } else {
+        music4.pause();
+        playBtn4.innerText = "Play";
+      }
+    });
+}
+
+// FIFTH SONG
+fetch(playUrl5)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music5 = new Audio(data.previews["preview-hq-mp3"]);
+  });
+
+function playMusic5() {
+  fetch(playUrl5)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music5.paused) {
+        music5.play();
+        playBtn5.innerText = "Pause";
+      } else {
+        music5.pause();
+        playBtn5.innerText = "Play";
+      }
+    });
+}
 
 happy.addEventListener("click", getPic1);
 // detailsBtn.addEventListener("click", getPic);
 playBtn1.addEventListener("click", playMusic1);
 playBtn2.addEventListener("click", playMusic2);
+playBtn3.addEventListener("click", playMusic3);
+playBtn4.addEventListener("click", playMusic4);
+playBtn5.addEventListener("click", playMusic5);
