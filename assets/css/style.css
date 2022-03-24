@@ -65,12 +65,19 @@
     box-sizing: border-box;
 }
 
+.media-scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 30%;
+    gap: 1rem;
+}
+
 .card-container {
     line-height: 1.5;
     padding: 5em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    /* display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;  */
     margin: 10px;
 }
 
@@ -79,7 +86,7 @@
     color: var(--white-color);
     background-image: url(../images/sample\ background.webp);
     background-size: cover;
-    padding: 6rem 0 0;
+    padding: 7rem 0 0;
     max-width: 35ch;
     border-radius:.5rem;
     overflow: hidden;
