@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@1,300&family=Roboto+Mono:wght@200&family=Roboto:ital,wght@1,100&display=swap');
+
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 /* HOME PAGE STYLES START */
 #home {
     text-align: center;
@@ -5,13 +8,10 @@
 
 #heading {
     color: #000000;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 150px;
     font-weight: bold;
     letter-spacing: -1px;
     line-height: 1;
-}
-
+} 
 .button {
   appearance: none;
   background-color: #1d4999;
@@ -28,7 +28,7 @@
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
-  margin: 3px;
+  margin: 15px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -72,6 +72,12 @@
     gap: 1rem;
 }
 
+body {
+    font-family: 'Red Hat Mono', monospace;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;  
+}
+
 .card-container {
     line-height: 1.5;
     padding: 5em;
@@ -82,6 +88,7 @@
 }
 
 .card {
+    font-family: 'Roboto Mono', monospace;
     display: grid;
     color: var(--white-color);
     background-image: url(../images/sample\ background.webp);
