@@ -9,20 +9,33 @@
 </head>
 
 <body>
-    <div id="home">
-        <h1 id="heading">choose your mood.</h1>
-        <div id="buttons">
-            <button id="happy" class="button">Happy</button>
-            <button id="sad" class="button">Sad</button>
-            <button id="confident" class="button">Confident</button>
-            <button id="calm" class="button">Calm</button>
-            <button id="amped" class="button">Amped</button>
-            <button id="random" class="button">Random...</button>
+    <div id="home" class="hero">
+        <h1 id="heading" class="title is-2">Choose your mood</h1>
+        <div id="buttons" class="columns navbar is-centered">
+            <button id="happy" class="button column is-1">Happy</button>
+            <button id="sad" class="button column is-1">Sad</button>
+            <button id="confident" class="button column is-1">Confident</button>
+            <button id="calm" class="button column is-1">Calm</button>
+            <button id="amped" class="button column is-1">Amped</button>
+            <button id="random" class="button column is-1">Random...</button>
         </div>
     </div>
         
-    <div class="card-container media-scroller">
-        <div class="card">
+    <div class="card-container columns">
+        <div class="card column is-2">
+            <div class="card-content">
+                <h2 class="card-title" id="card-title">Something Something</h2> 
+
+                <p class="card-body" id="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, aliquid? Deleniti, illo facere. Quaerat, consequuntur.</p>
+                <div class="card-footer">
+                    <div class="duration" id="duration"></div>
+                    <button href="#" class="btn" id="button">Play</button>
+                    <div class="timeleft" id="timeleft"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card column is-2">
             <div class="card-content">
                 <h2 class="card-title" id="card-title">Something Something</h2>
 
@@ -35,7 +48,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card column is-2">
             <div class="card-content">
                 <h2 class="card-title" id="card-title">Something Something</h2>
 
@@ -48,7 +61,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card column is-2">
             <div class="card-content">
                 <h2 class="card-title" id="card-title">Something Something</h2>
 
@@ -61,7 +74,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card column is-2">
             <div class="card-content">
                 <h2 class="card-title" id="card-title">Something Something</h2>
 
@@ -74,19 +87,6 @@
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-content">
-                <h2 class="card-title" id="card-title">Something Something</h2>
-
-                <p class="card-body" id="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, aliquid? Deleniti, illo facere. Quaerat, consequuntur.</p>
-                <div class="card-footer">
-                    <div class="duration" id="duration"></div>
-                    <button href="#" class="btn" id="button">Play</button>
-                    <div class="timeleft" id="timeleft"></div>
-                </div>
-            </div>
-        </div>
-        
     </div>
 
     <script src="assets/js/script.js"></script>

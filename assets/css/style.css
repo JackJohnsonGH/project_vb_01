@@ -1,7 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@1,300&family=Roboto+Mono:wght@200&family=Roboto:ital,wght@1,100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Hurricane&family=Montserrat:wght@200&family=Palette+Mosaic&family=Thasadith:ital@1&family=Work+Sans:wght@200&display=swap');
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 /* HOME PAGE STYLES START */
+
+:root {
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --yellow-color: #F6EA28;
+    --dblue-color: #0041D8;
+    --purple-color: #883CD5;
+    --pink-color: #F140B6;
+    --green-color: #18D545;
+  }
+
+*, 
+*::before
+*::after {
+    box-sizing: border-box;
+}
+
+#happy {
+    background-color: var(--yellow-color);
+    font-family: 'Happy Monkey', cursive;
+}
+
+#sad {
+    background-color: var(--dblue-color);
+    font-family: 'Thasadith', sans-serif;
+}
+
+#confident {
+    background-color: var(--pink-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#calm {
+    background-color: var(--green-color);
+    font-family: 'Hurricane', cursive;
+}
+
+#amped {
+    background-color: var(--purple-color);
+    font-family: 'Palette Mosaic', cursive;
+}
+
+#random {
+    background-color: black;
+}
 #home {
     text-align: center;
 }
@@ -12,6 +57,14 @@
     letter-spacing: -1px;
     line-height: 1;
 } 
+
+h1 {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    margin: 25px;
+    padding: 50px;
+}
+
 .button {
   appearance: none;
   background-color: #1d4999;
@@ -49,28 +102,6 @@
 }
 
 /* HOME PAGE STYLES END */
-:root {
-    --white-color: #FFFFFF;
-    --black-color: #000000;
-    --yellow-color: #F6EA28;
-    --dblue-color: #0041D8;
-    --purple-color: #883CD5;
-    --pink-color: #F140B6;
-    --green-color: #18D545;
-  }
-
-*, 
-*::before
-*::after {
-    box-sizing: border-box;
-}
-
-.media-scroller {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 30%;
-    gap: 1rem;
-}
 
 body {
     font-family: 'Red Hat Mono', monospace;
@@ -81,13 +112,14 @@ body {
 .card-container {
     line-height: 1.5;
     padding: 5em;
-    /* display: flex;
+    display: flex;
     flex-wrap: wrap; 
-    justify-content: space-around;  */
+    justify-content: space-around;
     margin: 10px;
 }
 
 .card {
+    position: relative;
     font-family: 'Roboto Mono', monospace;
     display: grid;
     color: var(--white-color);
@@ -98,6 +130,7 @@ body {
     border-radius:.5rem;
     overflow: hidden;
     border: 3px solid black;
+    margin: 25px;
 
     transition: transform 500ms ease;
 }
