@@ -1,15 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@1,300&family=Roboto+Mono:wght@200&family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Hurricane&family=Montserrat:wght@200&family=Palette+Mosaic&family=Thasadith:ital@1&family=Work+Sans:wght@200&display=swap');
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 /* HOME PAGE STYLES START */
+
+:root {
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --yellow-color: #F6EA28;
+    --dblue-color: #0041D8;
+    --purple-color: #883CD5;
+    --pink-color: #F140B6;
+    --green-color: #18D545;
+  }
+
+*, 
+*::before
+*::after {
+    box-sizing: border-box;
+}
+
+#happy {
+    background-color: var(--yellow-color);
+    font-family: 'Happy Monkey', cursive;
+}
+
+#sad {
+    background-color: var(--dblue-color);
+    font-family: 'Thasadith', sans-serif;
+}
+
+#confident {
+    background-color: var(--pink-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#calm {
+    background-color: var(--green-color);
+    font-family: 'Hurricane', cursive;
+}
+
+#amped {
+    background-color: var(--purple-color);
+    font-family: 'Palette Mosaic', cursive;
+}
+
+#random {
+    background-color: black;
+}
 #home {
   text-align: center;
 }
 
 #heading {
+<<<<<<< HEAD
+    color: #000000;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+} 
+
+h1 {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    margin: 25px;
+    padding: 50px;
+=======
   color: #000000;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 150px;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
+>>>>>>> 06675ca2b36e443b85d9370011e9617a6c530404
 }
 
 .button {
@@ -29,7 +91,7 @@
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
-  margin: 3px;
+  margin: 15px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -50,6 +112,37 @@
 }
 
 /* HOME PAGE STYLES END */
+<<<<<<< HEAD
+
+body {
+    font-family: 'Red Hat Mono', monospace;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;  
+}
+
+.card-container {
+    line-height: 1.5;
+    padding: 5em;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.card {
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    display: grid;
+    color: var(--white-color);
+    background-image: url(../images/sample\ background.webp);
+    background-size: cover;
+    padding: 7rem 0 0;
+    max-width: 35ch;
+    border-radius:.5rem;
+    overflow: hidden;
+    border: 3px solid black;
+    margin: 25px;
+=======
 :root {
   --white-color: #ffffff;
   --black-color: #000000;
@@ -83,6 +176,7 @@
   border-radius: 0.5rem;
   overflow: hidden;
   border: 3px solid black;
+>>>>>>> 06675ca2b36e443b85d9370011e9617a6c530404
 
   transition: transform 500ms ease;
 }
