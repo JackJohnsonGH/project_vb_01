@@ -20,6 +20,8 @@ var picUrl4 =
   "https://freesound.org/apiv2/users/edtijo/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var picUrl5 =
   "https://freesound.org/apiv2/users/cabled_mess/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var picUrl6 =
+  "https://freesound.org/apiv2/users/Migfus20/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 
 var playUrl1 =
   "https://freesound.org/apiv2/sounds/560446/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
@@ -31,10 +33,39 @@ var playUrl4 =
   "https://freesound.org/apiv2/sounds/240376/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var playUrl5 =
   "https://freesound.org/apiv2/sounds/335361/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var playUrl6 =
+  "https://freesound.org/apiv2/sounds/559834/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 
 var apiKey = "WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var testUrl =
   "https://freesound.org/apiv2/search/text/?query=happy&token=" + apiKey;
+
+document.addEventListener("DOMContentLoaded", () => {
+  moodTabs();
+
+  function moodTabs() {
+    document.querySelectorAll(".button").forEach((button) => {
+      button.addEventListener("click", () => {
+        switch (button.id) {
+          case "happy":
+            getPic1();
+            playBtn1.addEventListener("click", playMusic1);
+            playBtn2.addEventListener("click", playMusic2);
+            playBtn3.addEventListener("click", playMusic3);
+            playBtn4.addEventListener("click", playMusic4);
+            playBtn5.addEventListener("click", playMusic5);
+            break;
+          case "sad":
+            getPic6();
+            playBtn1.addEventListener("click", playMusic6);
+            console.log("this");
+
+            break;
+        }
+      });
+    });
+  }
+});
 
 function getPic1() {
   fetch(picUrl1)
@@ -42,12 +73,11 @@ function getPic1() {
       return response.json();
     })
     .then(function (data) {
-      //   var stockPic = document.querySelector("#card1").style.backgroudImage;
       var picContent = document.querySelector("#card-content1");
       var pic = document.createElement("img");
       pic.src = data.avatar.large;
       picContent.append(pic);
-      //   document.body.style.backgroudImage = "url(" + data.avatar.large + ")";
+      //   document.body.style.backgroudImage = "url('" + data.avatar.large + "')";
       //   document.querySelector(".card").style.backgroudSize = "cover";
       getDets1();
     });
@@ -313,10 +343,67 @@ function playMusic5() {
     });
 }
 
-happy.addEventListener("click", getPic1);
+// ******---- END OF HAPPY PAGE ----******
+
+function getPic6() {
+  fetch(picUrl6)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content1");
+      var pic = document.createElement("img");
+      pic.src = data.avatar.large;
+      picContent.append(pic);
+      getDets6();
+    });
+}
+
+function getDets6() {
+  fetch(playUrl6)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title1").textContent = data.name;
+      document.querySelector("#card-body1").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre1").textContent =
+        "Genre: " + data.tags[0];
+      console.log(data);
+    });
+}
+
+// SIXTH SONG
+
+fetch(playUrl6)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music6 = new Audio(data.previews["preview-hq-mp3"]);
+  });
+
+function playMusic6() {
+  fetch(playUrl6)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music6.paused) {
+        music6.play();
+        playBtn1.innerText = "Pause";
+      } else {
+        music6.pause();
+        playBtn1.innerText = "Play";
+      }
+    });
+}
+
+// happy.addEventListener("click", getPic1);
 // detailsBtn.addEventListener("click", getPic);
-playBtn1.addEventListener("click", playMusic1);
-playBtn2.addEventListener("click", playMusic2);
-playBtn3.addEventListener("click", playMusic3);
-playBtn4.addEventListener("click", playMusic4);
-playBtn5.addEventListener("click", playMusic5);
+// playBtn1.addEventListener("click", playMusic1);
+// playBtn2.addEventListener("click", playMusic2);
+// playBtn3.addEventListener("click", playMusic3);
+// playBtn4.addEventListener("click", playMusic4);
+// playBtn5.addEventListener("click", playMusic5);
