@@ -52,7 +52,6 @@
 }
 
 #heading {
-<<<<<<< HEAD
     color: #000000;
     font-weight: bold;
     letter-spacing: -1px;
@@ -64,14 +63,6 @@ h1 {
     border-bottom: 3px solid black;
     margin: 25px;
     padding: 50px;
-=======
-  color: #000000;
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 150px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
->>>>>>> 06675ca2b36e443b85d9370011e9617a6c530404
 }
 
 .button {
@@ -112,7 +103,6 @@ h1 {
 }
 
 /* HOME PAGE STYLES END */
-<<<<<<< HEAD
 
 body {
     font-family: 'Red Hat Mono', monospace;
@@ -142,41 +132,6 @@ body {
     overflow: hidden;
     border: 3px solid black;
     margin: 25px;
-=======
-:root {
-  --white-color: #ffffff;
-  --black-color: #000000;
-  --yellow-color: #f6ea28;
-  --dblue-color: #0041d8;
-  --purple-color: #883cd5;
-  --pink-color: #f140b6;
-  --green-color: #18d545;
-}
-
-*,
-*::before *::after {
-  box-sizing: border-box;
-}
-
-.card-container {
-  line-height: 1.5;
-  padding: 5em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.card {
-  display: grid;
-  color: var(--white-color);
-  background-image: url(../images/sample\ background.webp);
-  background-size: cover;
-  padding: 6rem 0 0;
-  max-width: 35ch;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  border: 3px solid black;
->>>>>>> 06675ca2b36e443b85d9370011e9617a6c530404
 
   transition: transform 500ms ease;
 }
@@ -227,6 +182,10 @@ body {
   background-color: var(--yellow-color);
   padding: 0.1em 1em;
   border-radius: 0.5;
+}
+
+.card-title {
+  word-wrap: break-word !important;
 }
 
 .card-footer {
@@ -286,5 +245,19 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
     transition-delay: 0 !important;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 1150px) {
+  .card p {
+    font-size: 15px;
+  }
+
+  .card h2 {
+    font-size: 20px;
   }
 }
