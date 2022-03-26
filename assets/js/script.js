@@ -407,3 +407,35 @@ function playMusic6() {
 // playBtn3.addEventListener("click", playMusic3);
 // playBtn4.addEventListener("click", playMusic4);
 // playBtn5.addEventListener("click", playMusic5);
+
+const targetDiv = document.getElementById("container");
+const btnHappy = document.getElementById("happy");
+const btnSad = document.getElementById("sad");
+const btnConfident = document.getElementById("confident");
+const btnCalm = document.getElementById("calm");
+const btnAmped = document.getElementById("amped");
+const btnRandom = document.getElementById("random");
+
+function showHappy() {
+  targetDiv.classList.remove("hide");
+}
+
+function showSad() {
+  targetDiv.classList.remove("hide");
+}
+
+function showConfident() {
+  targetDiv.classList.remove("hide");
+}
+
+function showCalm() {
+  targetDiv.classList.remove("hide");
+}
+
+function showAmped() {
+  targetDiv.classList.remove("hide");
+}
+
+function showRandom() {
+  targetDiv.classList.remove("hide");
+}
