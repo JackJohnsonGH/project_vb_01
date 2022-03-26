@@ -18,6 +18,9 @@
   box-sizing: border-box;
 }
 
+.player {
+}
+
 #happy {
   background-color: var(--yellow-color);
   font-family: "Happy Monkey", cursive;
@@ -51,26 +54,17 @@
 }
 
 #heading {
-<<<<<<< HEAD
   color: #000000;
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 150px;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
-=======
-    color: #000000;
-    font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 1;
-} 
+}
 
 h1 {
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    margin: 25px;
-    padding: 50px;
->>>>>>> 5f6c7e1c758c0b4dedd8689fa234a70496645659
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  margin: 25px;
+  padding: 50px;
 }
 
 .button {
@@ -111,20 +105,11 @@ h1 {
 }
 
 /* HOME PAGE STYLES END */
-<<<<<<< HEAD
-:root {
-  --white-color: #ffffff;
-  --black-color: #000000;
-  --yellow-color: #f6ea28;
-  --dblue-color: #0041d8;
-  --purple-color: #883cd5;
-  --pink-color: #f140b6;
-  --green-color: #18d545;
-}
 
-*,
-*::before *::after {
-  box-sizing: border-box;
+body {
+  font-family: "Red Hat Mono", monospace;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 
 .card-container {
@@ -133,49 +118,22 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 10px;
 }
 
 .card {
+  position: relative;
+  font-family: "Roboto Mono", monospace;
   display: grid;
   color: var(--white-color);
   background-image: url(../images/sample\ background.webp);
   background-size: cover;
-  padding: 6rem 0 0;
+  padding: 7rem 0 0;
   max-width: 35ch;
   border-radius: 0.5rem;
   overflow: hidden;
   border: 3px solid black;
-=======
-
-body {
-    font-family: 'Red Hat Mono', monospace;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Mono', monospace;  
-}
-
-.card-container {
-    line-height: 1.5;
-    padding: 5em;
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around;
-    margin: 10px;
-}
-
-.card {
-    position: relative;
-    font-family: 'Roboto Mono', monospace;
-    display: grid;
-    color: var(--white-color);
-    background-image: url(../images/sample\ background.webp);
-    background-size: cover;
-    padding: 7rem 0 0;
-    max-width: 35ch;
-    border-radius:.5rem;
-    overflow: hidden;
-    border: 3px solid black;
-    margin: 25px;
->>>>>>> 5f6c7e1c758c0b4dedd8689fa234a70496645659
+  margin: 25px;
 
   transition: transform 500ms ease;
 }

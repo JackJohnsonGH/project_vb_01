@@ -9,40 +9,36 @@ var cardBody1 = document.querySelector("#card-body1");
 var cardGenre1 = document.querySelector("#card-genre1");
 var cardContainer = document.querySelector(".card-container");
 var userUrl = "https://freesound.org/apiv2/users/";
+var apiKey = "ELptJk3uxFNf0EIbrCQTL6C3nalxj50aJCQ312on";
 
 // HAPPY
-var picUrl1 =
-  "https://freesound.org/apiv2/users/Migfus20/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
-var picUrl2 =
-  "https://freesound.org/apiv2/users/Migfus20/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
-var picUrl3 =
-  "https://freesound.org/apiv2/users/InspectorJ/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
-var picUrl4 =
-  "https://freesound.org/apiv2/users/edtijo/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
-var picUrl5 =
-  "https://freesound.org/apiv2/users/cabled_mess/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var picUrl1 = "https://freesound.org/apiv2/users/Migfus20/?token=" + apiKey;
+var picUrl2 = "https://freesound.org/apiv2/users/Migfus20/?token=" + apiKey;
+var picUrl3 = "https://freesound.org/apiv2/users/InspectorJ/?token=" + apiKey;
+var picUrl4 = "https://freesound.org/apiv2/users/edtijo/?token=" + apiKey;
+var picUrl5 = "https://freesound.org/apiv2/users/cabled_mess/?token=" + apiKey;
 
 // SAD
-var picUrl6 =
-  "https://freesound.org/apiv2/users/Migfus20/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var picUrl6 = "https://freesound.org/apiv2/users/Migfus20/?token=" + apiKey;
+var picUrl7 = "https://freesound.org/apiv2/users/Setuniman/?token=" + apiKey;
+var picUrl8 = "https://freesound.org/apiv2/users/PSOVOD/?token=" + apiKey;
+var picUrl9 = "https://freesound.org/apiv2/users/edtijo/?token=" + apiKey;
+var picUrl10 = "https://freesound.org/apiv2/users/Dasgoat/?token=" + apiKey;
 
 // HAPPY
-var playUrl1 =
-  "https://freesound.org/apiv2/sounds/560446/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
-var playUrl2 =
-  "https://freesound.org/apiv2/sounds/609562/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
-var playUrl3 =
-  "https://freesound.org/apiv2/sounds/411165/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
-var playUrl4 =
-  "https://freesound.org/apiv2/sounds/240376/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
-var playUrl5 =
-  "https://freesound.org/apiv2/sounds/335361/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var playUrl1 = "https://freesound.org/apiv2/sounds/560446/?token=" + apiKey;
+var playUrl2 = "https://freesound.org/apiv2/sounds/609562/?token=" + apiKey;
+var playUrl3 = "https://freesound.org/apiv2/sounds/411165/?token=" + apiKey;
+var playUrl4 = "https://freesound.org/apiv2/sounds/240376/?token=" + apiKey;
+var playUrl5 = "https://freesound.org/apiv2/sounds/335361/?token=" + apiKey;
 
 // SAD
-var playUrl6 =
-  "https://freesound.org/apiv2/sounds/559834/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+var playUrl6 = "https://freesound.org/apiv2/sounds/559834/?token=" + apiKey;
+var playUrl7 = "https://freesound.org/apiv2/sounds/150349/?token=" + apiKey;
+var playUrl8 = "https://freesound.org/apiv2/sounds/415186/?token=" + apiKey;
+var playUrl9 = "https://freesound.org/apiv2/sounds/238913/?token=" + apiKey;
+var playUrl10 = "https://freesound.org/apiv2/sounds/330599/?token=" + apiKey;
 
-var apiKey = "WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var testUrl =
   "https://freesound.org/apiv2/search/text/?query=happy&token=" + apiKey;
 
@@ -61,11 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
             playBtn4.addEventListener("click", playMusic4);
             playBtn5.addEventListener("click", playMusic5);
             break;
+
           case "sad":
             getPic6();
             playBtn1.addEventListener("click", playMusic6);
-            console.log("this");
-
+            playBtn2.addEventListener("click", playMusic7);
+            playBtn3.addEventListener("click", playMusic8);
+            playBtn4.addEventListener("click", playMusic9);
+            playBtn5.addEventListener("click", playMusic10);
             break;
         }
       });
@@ -97,6 +96,11 @@ function getDets1() {
       title1.textContent = data.name;
       cardBody1.textContent = "Artist: " + data.username;
       cardGenre1.textContent = "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music1;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      cardGenre1.append(player);
       getPic2();
     });
 }
@@ -217,11 +221,10 @@ fetch(playUrl1)
     return response.json();
   })
   .then(function (data) {
-    music1 = new Audio(data.previews["preview-hq-mp3"]);
+    music1 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic1() {
-  console.log("play");
   fetch(playUrl1)
     .then(function (response) {
       return response.json();
@@ -250,7 +253,8 @@ fetch(playUrl2)
   });
 
 function playMusic2() {
-  console.log("play");
+  var audios = document.getElementsByTagName("audio");
+  console.log(audios);
   fetch(playUrl2)
     .then(function (response) {
       return response.json();
@@ -258,13 +262,13 @@ function playMusic2() {
     .then(function (data) {
       console.log(data);
       if (music2.paused) {
-        music2.play();
-        playBtn2.innerText = "Pause";
+        music1.play();
+        playBtn1.innerText = "Pause";
         console.log(music2.paused);
       } else {
         console.log("pause");
-        music2.pause();
-        playBtn2.innerText = "Play";
+        music1.pause();
+        playBtn1.innerText = "Play";
       }
     });
 }
@@ -370,7 +374,118 @@ function getDets6() {
         "Artist: " + data.username;
       document.querySelector("#card-genre1").textContent =
         "Genre: " + data.tags[0];
-      console.log(data);
+      getPic7();
+    });
+}
+
+function getPic7() {
+  fetch(picUrl7)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content2");
+      var pic = document.querySelector("#img2");
+      pic.src = data.avatar.large;
+      getDets7();
+    });
+}
+
+function getDets7() {
+  fetch(playUrl7)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title2").textContent = data.name;
+      document.querySelector("#card-body2").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre2").textContent =
+        "Genre: " + data.tags[0];
+      getPic8();
+    });
+}
+
+function getPic8() {
+  fetch(picUrl8)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content3");
+      var pic = document.querySelector("#img3");
+      pic.src = data.avatar.large;
+      getDets8();
+    });
+}
+
+function getDets8() {
+  fetch(playUrl8)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title3").textContent = data.name;
+      document.querySelector("#card-body3").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre3").textContent =
+        "Genre: " + data.tags[0];
+      getPic9();
+    });
+}
+
+function getPic9() {
+  fetch(picUrl9)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content4");
+      var pic = document.querySelector("#img4");
+      pic.src = data.avatar.large;
+      getDets9();
+    });
+}
+
+function getDets9() {
+  fetch(playUrl9)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title4").textContent = data.name;
+      document.querySelector("#card-body4").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre4").textContent =
+        "Genre: " + data.tags[0];
+      getPic10();
+    });
+}
+
+function getPic10() {
+  fetch(picUrl10)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content5");
+      var pic = document.querySelector("#img5");
+      pic.src = data.avatar.large;
+      getDets10();
+    });
+}
+
+function getDets10() {
+  fetch(playUrl10)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title5").textContent = data.name;
+      document.querySelector("#card-body5").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre5").textContent =
+        "Genre: " + data.tags[0];
     });
 }
 
@@ -400,8 +515,117 @@ function playMusic6() {
     });
 }
 
+// SEVENTH SONG
+
+fetch(playUrl7)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music7 = new Audio(data.previews["preview-hq-mp3"]);
+  });
+
+function playMusic7() {
+  fetch(playUrl7)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music7.paused) {
+        music7.play();
+        playBtn2.innerText = "Pause";
+      } else {
+        music7.pause();
+        playBtn2.innerText = "Play";
+      }
+    });
+}
+
+// EIGHTH SONG
+
+fetch(playUrl8)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music8 = new Audio(data.previews["preview-hq-mp3"]);
+  });
+
+function playMusic8() {
+  fetch(playUrl8)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music8.paused) {
+        music8.play();
+        playBtn3.innerText = "Pause";
+      } else {
+        music8.pause();
+        playBtn3.innerText = "Play";
+      }
+    });
+}
+
+// NINTH SONG
+
+fetch(playUrl9)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music9 = new Audio(data.previews["preview-hq-mp3"]);
+  });
+
+function playMusic9() {
+  fetch(playUrl9)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music9.paused) {
+        music9.play();
+        playBtn4.innerText = "Pause";
+      } else {
+        music9.pause();
+        playBtn4.innerText = "Play";
+      }
+    });
+}
+
+// TENTH SONG
+
+fetch(playUrl10)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music10 = new Audio(data.previews["preview-hq-mp3"]);
+  });
+
+function playMusic10() {
+  fetch(playUrl10)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music10.paused) {
+        music10.play();
+        playBtn5.innerText = "Pause";
+      } else {
+        music10.pause();
+        playBtn5.innerText = "Play";
+      }
+    });
+}
+
 // happy.addEventListener("click", getPic1);
 // detailsBtn.addEventListener("click", getPic);
+// playBtn1.addEventListener("click", playMusic1);
+// playBtn2.addEventListener("click", playMusic2);
+// playBtn3.addEventListener("click", playMusic3);
+// playBtn4.addEventListener("click", playMusic4);
+// playBtn5.addEventListener("click", playMusic5);
 // playBtn1.addEventListener("click", playMusic1);
 // playBtn2.addEventListener("click", playMusic2);
 // playBtn3.addEventListener("click", playMusic3);
