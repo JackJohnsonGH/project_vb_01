@@ -10,6 +10,7 @@ var cardGenre1 = document.querySelector("#card-genre1");
 var cardContainer = document.querySelector(".card-container");
 var userUrl = "https://freesound.org/apiv2/users/";
 
+// HAPPY
 var picUrl1 =
   "https://freesound.org/apiv2/users/Migfus20/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var picUrl2 =
@@ -20,9 +21,12 @@ var picUrl4 =
   "https://freesound.org/apiv2/users/edtijo/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var picUrl5 =
   "https://freesound.org/apiv2/users/cabled_mess/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+
+// SAD
 var picUrl6 =
   "https://freesound.org/apiv2/users/Migfus20/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 
+// HAPPY
 var playUrl1 =
   "https://freesound.org/apiv2/sounds/560446/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var playUrl2 =
@@ -33,6 +37,8 @@ var playUrl4 =
   "https://freesound.org/apiv2/sounds/240376/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 var playUrl5 =
   "https://freesound.org/apiv2/sounds/335361/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
+
+// SAD
 var playUrl6 =
   "https://freesound.org/apiv2/sounds/559834/?token=WQG0rpvXpgS6UJ0x1cigSmQIh0rpUThXm0PTZ6ea";
 
@@ -74,9 +80,8 @@ function getPic1() {
     })
     .then(function (data) {
       var picContent = document.querySelector("#card-content1");
-      var pic = document.createElement("img");
+      var pic = document.querySelector("#img1");
       pic.src = data.avatar.large;
-      picContent.append(pic);
       //   document.body.style.backgroudImage = "url('" + data.avatar.large + "')";
       //   document.querySelector(".card").style.backgroudSize = "cover";
       getDets1();
@@ -103,9 +108,8 @@ function getPic2() {
     })
     .then(function (data) {
       var picContent = document.querySelector("#card-content2");
-      var pic = document.createElement("img");
+      var pic = document.querySelector("#img2");
       pic.src = data.avatar.large;
-      picContent.append(pic);
       getDets2();
     });
 }
@@ -131,9 +135,8 @@ function getPic3() {
     })
     .then(function (data) {
       var picContent = document.querySelector("#card-content3");
-      var pic = document.createElement("img");
+      var pic = document.querySelector("#img3");
       pic.src = data.avatar.large;
-      picContent.append(pic);
       getDets3();
     });
 }
@@ -160,9 +163,8 @@ function getPic4() {
     })
     .then(function (data) {
       var picContent = document.querySelector("#card-content4");
-      var pic = document.createElement("img");
+      var pic = document.querySelector("#img4");
       pic.src = data.avatar.large;
-      picContent.append(pic);
       getDets4();
     });
 }
@@ -189,9 +191,8 @@ function getPic5() {
     })
     .then(function (data) {
       var picContent = document.querySelector("#card-content5");
-      var pic = document.createElement("img");
+      var pic = document.querySelector("#img5");
       pic.src = data.avatar.large;
-      picContent.append(pic);
       getDets5();
     });
 }
@@ -352,9 +353,8 @@ function getPic6() {
     })
     .then(function (data) {
       var picContent = document.querySelector("#card-content1");
-      var pic = document.createElement("img");
+      var pic = document.querySelector("#img1");
       pic.src = data.avatar.large;
-      picContent.append(pic);
       getDets6();
     });
 }
