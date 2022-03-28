@@ -128,6 +128,11 @@ function getDets2() {
         "Artist: " + data.username;
       document.querySelector("#card-genre2").textContent =
         "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music2;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre2").append(player);
       getPic3();
     });
 }
@@ -249,7 +254,7 @@ fetch(playUrl2)
     return response.json();
   })
   .then(function (data) {
-    music2 = new Audio(data.previews["preview-hq-mp3"]);
+    music2 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic2() {
@@ -618,6 +623,19 @@ function playMusic10() {
       }
     });
 }
+
+document.addEventListener(
+  "play",
+  function (e) {
+    var audios = document.getElementsByTagName("audio");
+    for (var i = 0, len = audios.length; i < len; i++) {
+      if (audios[i] != e.target) {
+        audios[i].pause();
+      }
+    }
+  },
+  true
+);
 
 // happy.addEventListener("click", getPic1);
 // detailsBtn.addEventListener("click", getPic);
