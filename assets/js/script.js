@@ -1,4 +1,4 @@
-var happy = document.querySelector("#happy");
+// var happy = document.querySelector("#happy");
 // var playBtn1 = document.querySelector("#button1");
 // var playBtn2 = document.querySelector("#button2");
 // var playBtn3 = document.querySelector("#button3");
@@ -8,6 +8,7 @@ var title1 = document.querySelector("#card-title1");
 var cardBody1 = document.querySelector("#card-body1");
 var cardGenre1 = document.querySelector("#card-genre1");
 var cardContainer = document.querySelector(".card-container");
+var breaker = document.createElement("br");
 var userUrl = "https://freesound.org/apiv2/users/";
 var apiKey = "ELptJk3uxFNf0EIbrCQTL6C3nalxj50aJCQ312on";
 
@@ -57,20 +58,18 @@ document.addEventListener("DOMContentLoaded", () => {
         switch (button.id) {
           case "happy":
             getPic1();
-            playBtn1.addEventListener("click", playMusic1);
-            playBtn2.addEventListener("click", playMusic2);
-            playBtn3.addEventListener("click", playMusic3);
-            playBtn4.addEventListener("click", playMusic4);
-            playBtn5.addEventListener("click", playMusic5);
             break;
-
           case "sad":
             getPic6();
-            playBtn1.addEventListener("click", playMusic6);
-            playBtn2.addEventListener("click", playMusic7);
-            playBtn3.addEventListener("click", playMusic8);
-            playBtn4.addEventListener("click", playMusic9);
-            playBtn5.addEventListener("click", playMusic10);
+            break;
+          case "confident":
+            getPic11();
+            break;
+          case "calm":
+            getPic16();
+            break;
+          case "amped":
+            getPic21();
             break;
         }
       });
@@ -87,7 +86,7 @@ function getPic1() {
       var picContent = document.querySelector("#card-content1");
       var pic = document.querySelector("#img1");
       pic.src = data.avatar.large;
-      //   document.body.style.backgroudImage = "url('" + data.avatar.large + "')";
+      //   document.querySelector("#card1").backgroudImage = "black";
       //   document.querySelector(".card").style.backgroudSize = "cover";
       getDets1();
     });
@@ -171,7 +170,7 @@ function getDets3() {
       player.src = music3;
       player.classList = "player";
       player.setAttribute("controls", true);
-      document.querySelector("#card-genre3").append(player);
+      document.querySelector("#card-genre3").append(breaker, player);
       getPic4();
     });
 }
@@ -204,7 +203,7 @@ function getDets4() {
       player.src = music4;
       player.classList = "player";
       player.setAttribute("controls", true);
-      document.querySelector("#card-genre4").append(player);
+      document.querySelector("#card-genre4").append(breaker, player);
       getPic5();
     });
 }
@@ -237,7 +236,7 @@ function getDets5() {
       player.src = music5;
       player.classList = "player";
       player.setAttribute("controls", true);
-      document.querySelector("#card-genre5").append(player);
+      document.querySelector("#card-genre5").append(breaker, player);
     });
 }
 
@@ -259,12 +258,9 @@ function playMusic1() {
       console.log(data);
       if (music1.paused) {
         music1.play();
-        playBtn1.innerText = "Pause";
-        console.log(music1.paused);
       } else {
         console.log("pause");
         music1.pause();
-        playBtn1.innerText = "Play";
       }
     });
 }
@@ -289,12 +285,10 @@ function playMusic2() {
       console.log(data);
       if (music2.paused) {
         music1.play();
-        playBtn1.innerText = "Pause";
         console.log(music2.paused);
       } else {
         console.log("pause");
         music1.pause();
-        playBtn1.innerText = "Play";
       }
     });
 }
@@ -316,10 +310,8 @@ function playMusic3() {
     .then(function (data) {
       if (music3.paused) {
         music3.play();
-        playBtn3.innerText = "Pause";
       } else {
         music3.pause();
-        playBtn3.innerText = "Play";
       }
     });
 }
@@ -341,10 +333,8 @@ function playMusic4() {
     .then(function (data) {
       if (music4.paused) {
         music4.play();
-        playBtn4.innerText = "Pause";
       } else {
         music4.pause();
-        playBtn4.innerText = "Play";
       }
     });
 }
@@ -366,10 +356,8 @@ function playMusic5() {
     .then(function (data) {
       if (music5.paused) {
         music5.play();
-        playBtn5.innerText = "Pause";
       } else {
         music5.pause();
-        playBtn5.innerText = "Play";
       }
     });
 }
@@ -533,10 +521,8 @@ function playMusic6() {
     .then(function (data) {
       if (music6.paused) {
         music6.play();
-        playBtn1.innerText = "Pause";
       } else {
         music6.pause();
-        playBtn1.innerText = "Play";
       }
     });
 }
@@ -559,10 +545,8 @@ function playMusic7() {
     .then(function (data) {
       if (music7.paused) {
         music7.play();
-        playBtn2.innerText = "Pause";
       } else {
         music7.pause();
-        playBtn2.innerText = "Play";
       }
     });
 }
@@ -585,10 +569,8 @@ function playMusic8() {
     .then(function (data) {
       if (music8.paused) {
         music8.play();
-        playBtn3.innerText = "Pause";
       } else {
         music8.pause();
-        playBtn3.innerText = "Play";
       }
     });
 }
@@ -611,10 +593,8 @@ function playMusic9() {
     .then(function (data) {
       if (music9.paused) {
         music9.play();
-        playBtn4.innerText = "Pause";
       } else {
         music9.pause();
-        playBtn4.innerText = "Play";
       }
     });
 }
@@ -637,15 +617,19 @@ function playMusic10() {
     .then(function (data) {
       if (music10.paused) {
         music10.play();
-        playBtn5.innerText = "Pause";
       } else {
         music10.pause();
-        playBtn5.innerText = "Play";
       }
     });
 }
 
 // ******* --- END OF SAD PAGE --- *******
+
+// ****** --- END OF CONFIDENT PAGE --- *****
+
+// ****** --- END OF CALM PAGE --- ******
+
+// ****** --- END OF AMPED PAGE --- *******
 
 document.addEventListener(
   "play",

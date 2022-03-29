@@ -21,7 +21,7 @@ var moodCategories = [
             return response.json();
           })
           .then(function (data) {
-            data.avatar.large;
+            return data.avatar.large;
           }),
       },
       {
