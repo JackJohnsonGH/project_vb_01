@@ -20,6 +20,8 @@
 
 .player {
   width: 200px;
+  display: flex;
+  align-items: center;
 }
 
 .player {
@@ -39,6 +41,7 @@
 #confident {
   background-color: var(--pink-color);
   font-family: "Montserrat", sans-serif;
+  font-size: 17px;
 }
 
 #calm {
