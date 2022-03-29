@@ -22,6 +22,10 @@
   width: 200px;
 }
 
+.player {
+  width: 200px;
+}
+
 #happy {
   background-color: var(--yellow-color);
   font-family: "Happy Monkey", cursive;
@@ -123,18 +127,18 @@ body {
 }
 
 .card {
-  position: relative;
-  font-family: "Roboto Mono", monospace;
-  display: grid;
-  color: var(--white-color);
-  background-image: url(../images/sample\ background.webp);
-  background-size: cover;
-  padding: 7rem 0 0;
-  max-width: 35ch;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  border: 3px solid black;
-  margin: 25px;
+    position: grid;
+    font-family: 'Roboto Mono', monospace;
+    display: grid;
+    color: var(--white-color);
+    background-image: url(../images/sample\ background.webp);
+    background-size: cover;
+    padding: 7rem 0 0;
+    max-width: 35ch;
+    border-radius:.5rem;
+    overflow: hidden;
+    border: 3px solid black;
+    margin: 25px;
 
   transition: transform 500ms ease;
 }
@@ -251,10 +255,6 @@ body {
   }
 }
 
-.hide {
-  display: none !important;
-}
-
 @media screen and (max-width: 1150px) {
   .card p {
     font-size: 15px;
@@ -263,4 +263,8 @@ body {
   .card h2 {
     font-size: 20px;
   }
+}
+
+.hide {
+  display: none !important;
 }
