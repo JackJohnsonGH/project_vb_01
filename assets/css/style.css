@@ -248,10 +248,6 @@ body {
   }
 }
 
-.hide {
-  display: none !important;
-}
-
 @media screen and (max-width: 1150px) {
   .card p {
     font-size: 15px;
@@ -260,4 +256,8 @@ body {
   .card h2 {
     font-size: 20px;
   }
+}
+
+.hide {
+  display: none !important;
 }
