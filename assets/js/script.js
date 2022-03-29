@@ -1,9 +1,9 @@
 var happy = document.querySelector("#happy");
-var playBtn1 = document.querySelector("#button1");
-var playBtn2 = document.querySelector("#button2");
-var playBtn3 = document.querySelector("#button3");
-var playBtn4 = document.querySelector("#button4");
-var playBtn5 = document.querySelector("#button5");
+// var playBtn1 = document.querySelector("#button1");
+// var playBtn2 = document.querySelector("#button2");
+// var playBtn3 = document.querySelector("#button3");
+// var playBtn4 = document.querySelector("#button4");
+// var playBtn5 = document.querySelector("#button5");
 var title1 = document.querySelector("#card-title1");
 var cardBody1 = document.querySelector("#card-body1");
 var cardGenre1 = document.querySelector("#card-genre1");
@@ -25,6 +25,9 @@ var picUrl8 = "https://freesound.org/apiv2/users/PSOVOD/?token=" + apiKey;
 var picUrl9 = "https://freesound.org/apiv2/users/edtijo/?token=" + apiKey;
 var picUrl10 = "https://freesound.org/apiv2/users/Dasgoat/?token=" + apiKey;
 
+// CONFIDENT
+var picUrl11 = "https://freesound.org/apiv2/users/nomadicxxl/?token=" + apiKey;
+
 // HAPPY
 var playUrl1 = "https://freesound.org/apiv2/sounds/560446/?token=" + apiKey;
 var playUrl2 = "https://freesound.org/apiv2/sounds/609562/?token=" + apiKey;
@@ -38,6 +41,9 @@ var playUrl7 = "https://freesound.org/apiv2/sounds/150349/?token=" + apiKey;
 var playUrl8 = "https://freesound.org/apiv2/sounds/415186/?token=" + apiKey;
 var playUrl9 = "https://freesound.org/apiv2/sounds/238913/?token=" + apiKey;
 var playUrl10 = "https://freesound.org/apiv2/sounds/330599/?token=" + apiKey;
+
+// CONFIDENT
+var playUrl11 = "https://freesound.org/apiv2/sounds/371803/?token=" + apiKey;
 
 var testUrl =
   "https://freesound.org/apiv2/search/text/?query=happy&token=" + apiKey;
@@ -161,6 +167,11 @@ function getDets3() {
         "Artist: " + data.username;
       document.querySelector("#card-genre3").textContent =
         "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music3;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre3").append(player);
       getPic4();
     });
 }
@@ -189,6 +200,11 @@ function getDets4() {
         "Artist: " + data.username;
       document.querySelector("#card-genre4").textContent =
         "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music4;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre4").append(player);
       getPic5();
     });
 }
@@ -217,6 +233,11 @@ function getDets5() {
         "Artist: " + data.username;
       document.querySelector("#card-genre5").textContent =
         "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music5;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre5").append(player);
     });
 }
 
@@ -284,7 +305,7 @@ fetch(playUrl3)
     return response.json();
   })
   .then(function (data) {
-    music3 = new Audio(data.previews["preview-hq-mp3"]);
+    music3 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic3() {
@@ -309,7 +330,7 @@ fetch(playUrl4)
     return response.json();
   })
   .then(function (data) {
-    music4 = new Audio(data.previews["preview-hq-mp3"]);
+    music4 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic4() {
@@ -334,7 +355,7 @@ fetch(playUrl5)
     return response.json();
   })
   .then(function (data) {
-    music5 = new Audio(data.previews["preview-hq-mp3"]);
+    music5 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic5() {
@@ -623,6 +644,8 @@ function playMusic10() {
       }
     });
 }
+
+// ******* --- END OF SAD PAGE --- *******
 
 document.addEventListener(
   "play",
