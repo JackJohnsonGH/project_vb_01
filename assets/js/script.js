@@ -71,6 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
           case "amped":
             getPic21();
             break;
+          case "random":
+            pickRandom();
+            break;
         }
       });
     });
@@ -630,6 +633,23 @@ function playMusic10() {
 // ****** --- END OF CALM PAGE --- ******
 
 // ****** --- END OF AMPED PAGE --- *******
+
+// RANDOM FUNCTION
+
+function pickRandom() {
+  console.log("Random");
+  var arrayEmo = new Array("happy", "sad", "confident", "calm", "amped");
+  var random = arrayEmo[Math.floor(Math.random() * arrayEmo.length)];
+  console.log(random);
+  if (random === "happy") {
+    getPic1();
+  }
+  if (random === "sad") {
+    getPic6();
+  } else {
+    console.log("try again");
+  }
+}
 
 document.addEventListener(
   "play",
