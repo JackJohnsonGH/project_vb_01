@@ -261,3 +261,7 @@ body {
     font-size: 20px;
   }
 }
+
+.card h2 {
+  word-break: break-all;
+}
