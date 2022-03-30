@@ -34,11 +34,15 @@ var picUrl14 = "https://freesound.org/apiv2/users/frankum/?token=" + apiKey;
 var picUrl15 = "https://freesound.org/apiv2/users/edtijo/?token=" + apiKey;
 
 //CALM
-var picUrl16 = "https://freesound.org/apiv2/users/ValentinSosnitskiy/?token=" + apiKey;
+var picUrl16 =
+  "https://freesound.org/apiv2/users/ValentinSosnitskiy/?token=" + apiKey;
 var picUrl17 = "https://freesound.org/apiv2/users/code_box/?token=" + apiKey;
-var picUrl18 = "https://freesound.org/apiv2/users/ValentinSosnitskiy/?token=" + apiKey;
-var picUrl19 = "https://freesound.org/apiv2/users/lindseysewell/?token=" + apiKey;
-var picUrl20 = "https://freesound.org/apiv2/users/frederic.font/?token=" + apiKey;
+var picUrl18 =
+  "https://freesound.org/apiv2/users/ValentinSosnitskiy/?token=" + apiKey;
+var picUrl19 =
+  "https://freesound.org/apiv2/users/lindseysewell/?token=" + apiKey;
+var picUrl20 =
+  "https://freesound.org/apiv2/users/frederic.font/?token=" + apiKey;
 
 // HAPPY
 var playUrl1 = "https://freesound.org/apiv2/sounds/560446/?token=" + apiKey;
@@ -329,24 +333,24 @@ fetch(playUrl3)
     music3 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic3() {
-    var audios = document.getElementsByTagName("audio");
-    console.log(audios);
-    fetch(playUrl3)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-        if (music3.paused) {
-          music1.play();
-          console.log(music3.paused);
-        } else {
-          console.log("pause");
-          music3.pause();
-        }
-      });
-  }
+function playMusic3() {
+  var audios = document.getElementsByTagName("audio");
+  console.log(audios);
+  fetch(playUrl3)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      if (music3.paused) {
+        music1.play();
+        console.log(music3.paused);
+      } else {
+        console.log("pause");
+        music3.pause();
+      }
+    });
+}
 
 // FOURTH SONG
 fetch(playUrl4)
@@ -851,18 +855,18 @@ fetch(playUrl11)
     music11 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic11() {
-    fetch(playUrl11)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music11.paused) {
-          music11.play();
-        } else {
-          music11.pause();
-        }
-      });
+function playMusic11() {
+  fetch(playUrl11)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music11.paused) {
+        music11.play();
+      } else {
+        music11.pause();
+      }
+    });
 }
 
 // TWELTH SONG
@@ -874,18 +878,18 @@ fetch(playUrl12)
     music12 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic12() {
-    fetch(playUrl12)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music12.paused) {
-          music12.play();
-        } else {
-          music12.pause();
-        }
-      });
+function playMusic12() {
+  fetch(playUrl12)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music12.paused) {
+        music12.play();
+      } else {
+        music12.pause();
+      }
+    });
 }
 
 // THIRTEENTH SONG
@@ -897,18 +901,18 @@ fetch(playUrl13)
     music13 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic13() {
-    fetch(playUrl13)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music13.paused) {
-          music13.play();
-        } else {
-          music13.pause();
-        }
-      });
+function playMusic13() {
+  fetch(playUrl13)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music13.paused) {
+        music13.play();
+      } else {
+        music13.pause();
+      }
+    });
 }
 
 // FOURTTEENTH SONG
@@ -920,18 +924,18 @@ fetch(playUrl14)
     music14 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic14() {
-    fetch(playUrl14)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music14.paused) {
-          music14.play();
-        } else {
-          music14.pause();
-        }
-      });
+function playMusic14() {
+  fetch(playUrl14)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music14.paused) {
+        music14.play();
+      } else {
+        music14.pause();
+      }
+    });
 }
 
 // FIFTEENTH SONG
@@ -943,18 +947,18 @@ fetch(playUrl15)
     music15 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic15() {
-    fetch(playUrl15)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music15.paused) {
-          music15.play();
-        } else {
-          music15.pause();
-        }
-      });
+function playMusic15() {
+  fetch(playUrl15)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music15.paused) {
+        music15.play();
+      } else {
+        music15.pause();
+      }
+    });
 }
 // ****** --- END OF CONFIDENT PAGE --- *****
 
@@ -1129,18 +1133,18 @@ fetch(playUrl16)
     music16 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic16() {
-    fetch(playUrl16)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music16.paused) {
-          music16.play();
-        } else {
-          music16.pause();
-        }
-      });
+function playMusic16() {
+  fetch(playUrl16)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music16.paused) {
+        music16.play();
+      } else {
+        music16.pause();
+      }
+    });
 }
 
 // SEVENTEENTH SONG
@@ -1152,18 +1156,18 @@ fetch(playUrl17)
     music17 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic12() {
-    fetch(playUrl17)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music17.paused) {
-          music17.play();
-        } else {
-          music17.pause();
-        }
-      });
+function playMusic12() {
+  fetch(playUrl17)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music17.paused) {
+        music17.play();
+      } else {
+        music17.pause();
+      }
+    });
 }
 
 // EIGHTEENTH SONG
@@ -1175,18 +1179,18 @@ fetch(playUrl18)
     music18 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic18() {
-    fetch(playUrl18)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music18.paused) {
-          music18.play();
-        } else {
-          music18.pause();
-        }
-      });
+function playMusic18() {
+  fetch(playUrl18)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music18.paused) {
+        music18.play();
+      } else {
+        music18.pause();
+      }
+    });
 }
 
 // NINETEENTH SONG
@@ -1198,18 +1202,18 @@ fetch(playUrl19)
     music19 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic19() {
-    fetch(playUrl19)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music19.paused) {
-          music19.play();
-        } else {
-          music19.pause();
-        }
-      });
+function playMusic19() {
+  fetch(playUrl19)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music19.paused) {
+        music19.play();
+      } else {
+        music19.pause();
+      }
+    });
 }
 
 // TWENTIETH SONG
@@ -1221,18 +1225,18 @@ fetch(playUrl20)
     music20 = data.previews["preview-hq-mp3"];
   });
 
-  function playMusic20() {
-    fetch(playUrl20)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        if (music20.paused) {
-          music20.play();
-        } else {
-          music20.pause();
-        }
-      });
+function playMusic20() {
+  fetch(playUrl20)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music20.paused) {
+        music20.play();
+      } else {
+        music20.pause();
+      }
+    });
 }
 // ****** --- END OF CALM PAGE --- ******
 
@@ -1247,18 +1251,23 @@ function pickRandom() {
   console.log(random);
   if (random === "happy") {
     getPic1();
+    showHappy();
   }
   if (random === "sad") {
     getPic6();
+    showSad();
   }
   if (random === "confident") {
     getPic11();
+    showConfident();
   }
   if (random === "calm") {
     getPic16();
+    showCalm();
   }
   if (random === "amped") {
     getPic21();
+    showAmped();
   } else {
     console.log("try again");
   }
@@ -1307,427 +1316,567 @@ var elem5 = document.getElementById("card5");
 function showHappy() {
   targetDiv.classList.remove("hide");
 
-  elem1.animate([
-     {transform: 'scale(1)', background: 'black', opacity: 1},
-     {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
-     {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
-  ], {
-    duration: 3000,
-    easing: 'linear',
-    delay: 10,
-    iterations: 1,
-    direction: 'normal',
-    fill: 'forwards'
-  });
+  elem1.animate(
+    [
+      { transform: "scale(1)", background: "black", opacity: 1 },
+      {
+        transform: "scale(.5) rotate(270deg)",
+        background: "blue",
+        opacity: 0.5,
+      },
+      { transform: "scale(1) rotate(0deg)", background: "yellow", opcaity: 1 },
+    ],
+    {
+      duration: 3000,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-  elem2.animate([
-    {transform: 'scale(1)', background: 'black', opacity: 1},
-    {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
-    {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
- ], {
-   duration: 4000,
-   easing: 'linear',
-   delay: 10,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
- });
+  elem2.animate(
+    [
+      { transform: "scale(1)", background: "black", opacity: 1 },
+      {
+        transform: "scale(.5) rotate(270deg)",
+        background: "blue",
+        opacity: 0.5,
+      },
+      { transform: "scale(1) rotate(0deg)", background: "yellow", opcaity: 1 },
+    ],
+    {
+      duration: 4000,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
- elem3.animate([
-  {transform: 'scale(1)', background: 'black', opacity: 1},
-  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
-  {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
-], {
- duration: 5000,
- easing: 'linear',
- delay: 10,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem3.animate(
+    [
+      { transform: "scale(1)", background: "black", opacity: 1 },
+      {
+        transform: "scale(.5) rotate(270deg)",
+        background: "blue",
+        opacity: 0.5,
+      },
+      { transform: "scale(1) rotate(0deg)", background: "yellow", opcaity: 1 },
+    ],
+    {
+      duration: 5000,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem4.animate([
-  {transform: 'scale(1)', background: 'black', opacity: 1},
-  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
-  {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
-], {
- duration: 6000,
- easing: 'linear',
- delay: 10,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem4.animate(
+    [
+      { transform: "scale(1)", background: "black", opacity: 1 },
+      {
+        transform: "scale(.5) rotate(270deg)",
+        background: "blue",
+        opacity: 0.5,
+      },
+      { transform: "scale(1) rotate(0deg)", background: "yellow", opcaity: 1 },
+    ],
+    {
+      duration: 6000,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem5.animate([
-  {transform: 'scale(1)', background: 'black', opacity: 1},
-  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
-  {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
-], {
- duration: 7000,
- easing: 'linear',
- delay: 10,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem5.animate(
+    [
+      { transform: "scale(1)", background: "black", opacity: 1 },
+      {
+        transform: "scale(.5) rotate(270deg)",
+        background: "blue",
+        opacity: 0.5,
+      },
+      { transform: "scale(1) rotate(0deg)", background: "yellow", opcaity: 1 },
+    ],
+    {
+      duration: 7000,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 }
 
 function showSad() {
   targetDiv.classList.remove("hide");
 
-  elem1.animate([
-    {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
-    {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
-    {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
- ], {
-   duration: 2500,
-   easing: 'linear',
-   delay: 10,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
- });
+  elem1.animate(
+    [
+      { transform: "translate(0px, 0px)", background: "black", opacity: 1 },
+      {
+        transform: "translate(100px, 100px) rotate(-200deg)",
+        background: "gray",
+        opacity: 0.5,
+      },
+      { transform: "translate(0px, 0px", background: "blue", opcaity: 1 },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
- elem2.animate([
-  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
-  {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
-  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
-], {
-  duration: 2500,
-  easing: 'linear',
-  delay: 10,
-  iterations: 1,
-  direction: 'normal',
-  fill: 'forwards'
-});
+  elem2.animate(
+    [
+      { transform: "translate(0px, 0px)", background: "black", opacity: 1 },
+      {
+        transform: "translate(100px, 100px) rotate(-200deg)",
+        background: "gray",
+        opacity: 0.5,
+      },
+      { transform: "translate(0px, 0px", background: "blue", opcaity: 1 },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem3.animate([
-  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
-  {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
-  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
-], {
-duration: 2500,
-easing: 'linear',
-delay: 10,
-iterations: 1,
-direction: 'normal',
-fill: 'forwards'
-});
+  elem3.animate(
+    [
+      { transform: "translate(0px, 0px)", background: "black", opacity: 1 },
+      {
+        transform: "translate(100px, 100px) rotate(-200deg)",
+        background: "gray",
+        opacity: 0.5,
+      },
+      { transform: "translate(0px, 0px", background: "blue", opcaity: 1 },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem4.animate([
-  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
-  {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
-  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
-], {
-duration: 2500,
-easing: 'linear',
-delay: 10,
-iterations: 1,
-direction: 'normal',
-fill: 'forwards'
-});
+  elem4.animate(
+    [
+      { transform: "translate(0px, 0px)", background: "black", opacity: 1 },
+      {
+        transform: "translate(100px, 100px) rotate(-200deg)",
+        background: "gray",
+        opacity: 0.5,
+      },
+      { transform: "translate(0px, 0px", background: "blue", opcaity: 1 },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem5.animate([
-  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
-  {transform: 'translate(100px, 300px) rotate(-200deg)', background: 'gray', opacity: .5},
-  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
-], {
-duration: 2500,
-easing: 'linear',
-delay: 10,
-iterations: 1,
-direction: 'normal',
-fill: 'forwards'
-});
+  elem5.animate(
+    [
+      { transform: "translate(0px, 0px)", background: "black", opacity: 1 },
+      {
+        transform: "translate(100px, 300px) rotate(-200deg)",
+        background: "gray",
+        opacity: 0.5,
+      },
+      { transform: "translate(0px, 0px", background: "blue", opcaity: 1 },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 }
 
 function showConfident() {
   targetDiv.classList.remove("hide");
 
-  elem1.animate([
-    {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
-    {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
-    {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
- ], {
-   duration: 1500,
-   easing: 'linear',
-   delay: 0,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
- });
+  elem1.animate(
+    [
+      { transform: "skew(0deg,0deg)", background: "black", opacity: 1 },
+      { transform: "skew(50deg, 55deg)", background: "gray", opacity: 0.5 },
+      { transform: "skew(0deg, 0deg)", background: "pink", opcaity: 1 },
+    ],
+    {
+      duration: 1500,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
- elem2.animate([
-  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
-  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
-  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
-], {
- duration: 1500,
- easing: 'linear',
- delay: 1500,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem2.animate(
+    [
+      { transform: "skew(0deg,0deg)", background: "black", opacity: 1 },
+      { transform: "skew(50deg, 55deg)", background: "gray", opacity: 0.5 },
+      { transform: "skew(0deg, 0deg)", background: "pink", opcaity: 1 },
+    ],
+    {
+      duration: 1500,
+      easing: "linear",
+      delay: 1500,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem3.animate([
-  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
-  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
-  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
-], {
- duration: 1500,
- easing: 'linear',
- delay: 3000,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem3.animate(
+    [
+      { transform: "skew(0deg,0deg)", background: "black", opacity: 1 },
+      { transform: "skew(50deg, 55deg)", background: "gray", opacity: 0.5 },
+      { transform: "skew(0deg, 0deg)", background: "pink", opcaity: 1 },
+    ],
+    {
+      duration: 1500,
+      easing: "linear",
+      delay: 3000,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem4.animate([
-  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
-  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
-  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
-], {
- duration: 1500,
- easing: 'linear',
- delay: 4500,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem4.animate(
+    [
+      { transform: "skew(0deg,0deg)", background: "black", opacity: 1 },
+      { transform: "skew(50deg, 55deg)", background: "gray", opacity: 0.5 },
+      { transform: "skew(0deg, 0deg)", background: "pink", opcaity: 1 },
+    ],
+    {
+      duration: 1500,
+      easing: "linear",
+      delay: 4500,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem5.animate([
-  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
-  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
-  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
-], {
- duration: 1500,
- easing: 'linear',
- delay: 7000,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem5.animate(
+    [
+      { transform: "skew(0deg,0deg)", background: "black", opacity: 1 },
+      { transform: "skew(50deg, 55deg)", background: "gray", opacity: 0.5 },
+      { transform: "skew(0deg, 0deg)", background: "pink", opcaity: 1 },
+    ],
+    {
+      duration: 1500,
+      easing: "linear",
+      delay: 7000,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 }
 
 function showCalm() {
   targetDiv.classList.remove("hide");
 
-  elem1.animate([
-    {opacity: .2, background: 'gray'},
-    {opacity: .4},
-    {opacity: .6},
-    {opacity: .8},
-    {opcaity: 1, background: 'green'},
- ], {
-   duration: 4000,
-   easing: 'linear',
-   delay: 0,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
- });
+  elem1.animate(
+    [
+      { opacity: 0.2, background: "gray" },
+      { opacity: 0.4 },
+      { opacity: 0.6 },
+      { opacity: 0.8 },
+      { opcaity: 1, background: "green" },
+    ],
+    {
+      duration: 4000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
- elem2.animate([
-  {opacity: .2, background: 'gray'},
-    {opacity: .4},
-    {opacity: .6},
-    {opacity: .8},
-    {opcaity: 1, background: 'green'},
-], {
- duration: 4000,
- easing: 'linear',
- delay: 0,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem2.animate(
+    [
+      { opacity: 0.2, background: "gray" },
+      { opacity: 0.4 },
+      { opacity: 0.6 },
+      { opacity: 0.8 },
+      { opcaity: 1, background: "green" },
+    ],
+    {
+      duration: 4000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem3.animate([
-  {opacity: .2, background: 'gray'},
-    {opacity: .4},
-    {opacity: .6},
-    {opacity: .8},
-    {opcaity: 1, background: 'green'},
-], {
- duration: 4000,
- easing: 'linear',
- delay: 0,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem3.animate(
+    [
+      { opacity: 0.2, background: "gray" },
+      { opacity: 0.4 },
+      { opacity: 0.6 },
+      { opacity: 0.8 },
+      { opcaity: 1, background: "green" },
+    ],
+    {
+      duration: 4000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem4.animate([
-  {opacity: .2, background: 'gray'},
-    {opacity: .4},
-    {opacity: .6},
-    {opacity: .8},
-    {opcaity: 1, background: 'green'},
-], {
- duration: 4000,
- easing: 'linear',
- delay: 0,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem4.animate(
+    [
+      { opacity: 0.2, background: "gray" },
+      { opacity: 0.4 },
+      { opacity: 0.6 },
+      { opacity: 0.8 },
+      { opcaity: 1, background: "green" },
+    ],
+    {
+      duration: 4000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem5.animate([
-  {opacity: .2, background: 'gray'},
-  {opacity: .4},
-  {opacity: .6},
-  {opacity: .8},
-  {opcaity: 1, background: 'green'},
-], {
- duration: 4000,
- easing: 'linear',
- delay: 0,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});  
+  elem5.animate(
+    [
+      { opacity: 0.2, background: "gray" },
+      { opacity: 0.4 },
+      { opacity: 0.6 },
+      { opacity: 0.8 },
+      { opcaity: 1, background: "green" },
+    ],
+    {
+      duration: 4000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 }
 
 function showAmped() {
   targetDiv.classList.remove("hide");
 
-  elem1.animate([
-    {transform: 'scale(1))', background: 'black', opacity: 1},
-    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
-    {transform: 'scale(1)', background: 'purple', opcaity: 1},
-  ], {
-   duration: 1000,
-   easing: 'linear',
-   delay: 0,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
-  });
+  elem1.animate(
+    [
+      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
+      { transform: "scale(1)", background: "purple", opcaity: 1 },
+    ],
+    {
+      duration: 1000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-  elem2.animate([
-    {transform: 'scale(1))', background: 'black', opacity: 1},
-    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
-    {transform: 'scale(1)', background: 'purple', opcaity: 1},
-  ], {
-   duration: 1000,
-   easing: 'linear',
-   delay: 0,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
-  });
+  elem2.animate(
+    [
+      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
+      { transform: "scale(1)", background: "purple", opcaity: 1 },
+    ],
+    {
+      duration: 1000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-  elem3.animate([
-    {transform: 'scale(1))', background: 'black', opacity: 1},
-    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
-    {transform: 'scale(1)', background: 'purple', opcaity: 1},
-  ], {
-   duration: 1000,
-   easing: 'linear',
-   delay: 0,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
-  });
+  elem3.animate(
+    [
+      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
+      { transform: "scale(1)", background: "purple", opcaity: 1 },
+    ],
+    {
+      duration: 1000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-  elem4.animate([
-    {transform: 'scale(1))', background: 'black', opacity: 1},
-    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
-    {transform: 'scale(1)', background: 'purple', opcaity: 1},
-  ], {
-   duration: 1000,
-   easing: 'linear',
-   delay: 0,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
-  });
+  elem4.animate(
+    [
+      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
+      { transform: "scale(1)", background: "purple", opcaity: 1 },
+    ],
+    {
+      duration: 1000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-  elem5.animate([
-    {transform: 'scale(1))', background: 'black', opacity: 1},
-    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
-    {transform: 'scale(1)', background: 'purple', opcaity: 1},
-  ], {
-   duration: 1000,
-   easing: 'linear',
-   delay: 0,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
-  });
-
-
+  elem5.animate(
+    [
+      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
+      { transform: "scale(1)", background: "purple", opcaity: 1 },
+    ],
+    {
+      duration: 1000,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 }
 
 function showRandom() {
   targetDiv.classList.remove("hide");
 
-  elem1.animate([
-    {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
-    {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
-    {transform: 'translate(0px, 0px', background: 'black', opcaity: 1},
- ], {
-   duration: 2500,
-   easing: 'linear',
-   delay: 10,
-   iterations: 1,
-   direction: 'normal',
-   fill: 'forwards'
- });
+  elem1.animate(
+    [
+      { transform: "translate(0px, 0px)", background: "black", opacity: 1 },
+      {
+        transform: "translate(100px, 100px) rotate(-200deg)",
+        background: "gray",
+        opacity: 0.5,
+      },
+      { transform: "translate(0px, 0px", background: "black", opcaity: 1 },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
- elem2.animate([
-  {opacity: .2, background: 'gray'},
-    {opacity: .4},
-    {opacity: .6},
-    {opacity: .8},
-    {opcaity: 1, background: 'black'},
-], {
- duration: 2500,
- easing: 'linear',
- delay: 0,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem2.animate(
+    [
+      { opacity: 0.2, background: "gray" },
+      { opacity: 0.4 },
+      { opacity: 0.6 },
+      { opacity: 0.8 },
+      { opcaity: 1, background: "black" },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem3.animate([
-  {transform: 'scale(1)', background: 'black', opacity: 1},
-  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
-  {transform: 'scale(1) rotate(0deg)', background: 'black', opcaity: 1},
-], {
- duration: 2500,
- easing: 'linear',
- delay: 10,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem3.animate(
+    [
+      { transform: "scale(1)", background: "black", opacity: 1 },
+      {
+        transform: "scale(.5) rotate(270deg)",
+        background: "blue",
+        opacity: 0.5,
+      },
+      { transform: "scale(1) rotate(0deg)", background: "black", opcaity: 1 },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem4.animate([
-  {transform: 'scale(1)', background: 'black', opacity: 1},
-  {transform: 'scale(1.5)', background: 'gray', opacity: .5},
-  {transform: 'scale(1)', background: 'black', opcaity: 1},
-], {
- duration: 2500,
- easing: 'linear',
- delay: 0,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
+  elem4.animate(
+    [
+      { transform: "scale(1)", background: "black", opacity: 1 },
+      { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
+      { transform: "scale(1)", background: "black", opcaity: 1 },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 0,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 
-elem5.animate([
-  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
-  {transform: 'translate(100px, 300px) rotate(-200deg)', background: 'gray', opacity: .5},
-  {transform: 'translate(0px, 0px', background: 'black', opcaity: 1},
-], {
-duration: 2500,
-easing: 'linear',
-delay: 10,
-iterations: 1,
-direction: 'normal',
-fill: 'forwards'
-});
+  elem5.animate(
+    [
+      { transform: "translate(0px, 0px)", background: "black", opacity: 1 },
+      {
+        transform: "translate(100px, 300px) rotate(-200deg)",
+        background: "gray",
+        opacity: 0.5,
+      },
+      { transform: "translate(0px, 0px", background: "black", opcaity: 1 },
+    ],
+    {
+      duration: 2500,
+      easing: "linear",
+      delay: 10,
+      iterations: 1,
+      direction: "normal",
+      fill: "forwards",
+    }
+  );
 }
