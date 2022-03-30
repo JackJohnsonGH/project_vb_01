@@ -20,6 +20,12 @@
 
 .player {
   width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.player {
+  width: 200px;
 }
 
 #happy {
@@ -35,6 +41,7 @@
 #confident {
   background-color: var(--pink-color);
   font-family: "Montserrat", sans-serif;
+  font-size: 17px;
 }
 
 #calm {
@@ -120,6 +127,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 10px;
+  position: relative;
 }
 
 .card {
@@ -127,7 +135,6 @@ body {
   font-family: "Roboto Mono", monospace;
   display: grid;
   color: var(--white-color);
-  background-image: url(../images/sample\ background.webp);
   background-size: cover;
   padding: 7rem 0 0;
   max-width: 35ch;

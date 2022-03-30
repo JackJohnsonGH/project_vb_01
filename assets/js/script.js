@@ -28,6 +28,17 @@ var picUrl10 = "https://freesound.org/apiv2/users/Dasgoat/?token=" + apiKey;
 
 // CONFIDENT
 var picUrl11 = "https://freesound.org/apiv2/users/nomadicxxl/?token=" + apiKey;
+var picUrl12 = "https://freesound.org/apiv2/users/Cloud-10/?token=" + apiKey;
+var picUrl13 = "https://freesound.org/apiv2/users/frankum/?token=" + apiKey;
+var picUrl14 = "https://freesound.org/apiv2/users/frankum/?token=" + apiKey;
+var picUrl15 = "https://freesound.org/apiv2/users/edtijo/?token=" + apiKey;
+
+//CALM
+var picUrl16 = "https://freesound.org/apiv2/users/ValentinSosnitskiy/?token=" + apiKey;
+var picUrl17 = "https://freesound.org/apiv2/users/code_box/?token=" + apiKey;
+var picUrl18 = "https://freesound.org/apiv2/users/ValentinSosnitskiy/?token=" + apiKey;
+var picUrl19 = "https://freesound.org/apiv2/users/lindseysewell/?token=" + apiKey;
+var picUrl20 = "https://freesound.org/apiv2/users/frederic.font/?token=" + apiKey;
 
 // HAPPY
 var playUrl1 = "https://freesound.org/apiv2/sounds/560446/?token=" + apiKey;
@@ -45,6 +56,17 @@ var playUrl10 = "https://freesound.org/apiv2/sounds/330599/?token=" + apiKey;
 
 // CONFIDENT
 var playUrl11 = "https://freesound.org/apiv2/sounds/371803/?token=" + apiKey;
+var playUrl12 = "https://freesound.org/apiv2/sounds/536250/?token=" + apiKey;
+var playUrl13 = "https://freesound.org/apiv2/sounds/382063/?token=" + apiKey;
+var playUrl14 = "https://freesound.org/apiv2/sounds/442285/?token=" + apiKey;
+var playUrl15 = "https://freesound.org/apiv2/sounds/240028/?token=" + apiKey;
+
+// CALM
+var playUrl16 = "https://freesound.org/apiv2/sounds/493672/?token=" + apiKey;
+var playUrl17 = "https://freesound.org/apiv2/sounds/595108/?token=" + apiKey;
+var playUrl18 = "https://freesound.org/apiv2/sounds/278201/?token=" + apiKey;
+var playUrl19 = "https://freesound.org/apiv2/sounds/512929/?token=" + apiKey;
+var playUrl20 = "https://freesound.org/apiv2/sounds/130878/?token=" + apiKey;
 
 var testUrl =
   "https://freesound.org/apiv2/search/text/?query=happy&token=" + apiKey;
@@ -307,19 +329,24 @@ fetch(playUrl3)
     music3 = data.previews["preview-hq-mp3"];
   });
 
-function playMusic3() {
-  fetch(playUrl3)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      if (music3.paused) {
-        music3.play();
-      } else {
-        music3.pause();
-      }
-    });
-}
+  function playMusic3() {
+    var audios = document.getElementsByTagName("audio");
+    console.log(audios);
+    fetch(playUrl3)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+        if (music3.paused) {
+          music1.play();
+          console.log(music3.paused);
+        } else {
+          console.log("pause");
+          music3.pause();
+        }
+      });
+  }
 
 // FOURTH SONG
 fetch(playUrl4)
@@ -388,11 +415,14 @@ function getDets6() {
       return response.json();
     })
     .then(function (data) {
-      document.querySelector("#card-title1").textContent = data.name;
-      document.querySelector("#card-body1").textContent =
-        "Artist: " + data.username;
-      document.querySelector("#card-genre1").textContent =
-        "Genre: " + data.tags[0];
+      title1.textContent = data.name;
+      cardBody1.textContent = "Artist: " + data.username;
+      cardGenre1.textContent = "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music6;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      cardGenre1.append(player);
       getPic7();
     });
 }
@@ -421,6 +451,11 @@ function getDets7() {
         "Artist: " + data.username;
       document.querySelector("#card-genre2").textContent =
         "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music7;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre2").append(player);
       getPic8();
     });
 }
@@ -449,6 +484,11 @@ function getDets8() {
         "Artist: " + data.username;
       document.querySelector("#card-genre3").textContent =
         "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music8;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre3").append(breaker, player);
       getPic9();
     });
 }
@@ -477,6 +517,11 @@ function getDets9() {
         "Artist: " + data.username;
       document.querySelector("#card-genre4").textContent =
         "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music9;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre4").append(breaker, player);
       getPic10();
     });
 }
@@ -505,6 +550,11 @@ function getDets10() {
         "Artist: " + data.username;
       document.querySelector("#card-genre5").textContent =
         "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music10;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre5").append(breaker, player);
     });
 }
 
@@ -515,7 +565,7 @@ fetch(playUrl6)
     return response.json();
   })
   .then(function (data) {
-    music6 = new Audio(data.previews["preview-hq-mp3"]);
+    music6 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic6() {
@@ -539,7 +589,7 @@ fetch(playUrl7)
     return response.json();
   })
   .then(function (data) {
-    music7 = new Audio(data.previews["preview-hq-mp3"]);
+    music7 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic7() {
@@ -563,7 +613,7 @@ fetch(playUrl8)
     return response.json();
   })
   .then(function (data) {
-    music8 = new Audio(data.previews["preview-hq-mp3"]);
+    music8 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic8() {
@@ -587,7 +637,7 @@ fetch(playUrl9)
     return response.json();
   })
   .then(function (data) {
-    music9 = new Audio(data.previews["preview-hq-mp3"]);
+    music9 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic9() {
@@ -611,7 +661,7 @@ fetch(playUrl10)
     return response.json();
   })
   .then(function (data) {
-    music10 = new Audio(data.previews["preview-hq-mp3"]);
+    music10 = data.previews["preview-hq-mp3"];
   });
 
 function playMusic10() {
@@ -630,8 +680,560 @@ function playMusic10() {
 
 // ******* --- END OF SAD PAGE --- *******
 
+function getPic11() {
+  fetch(picUrl11)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content1");
+      var pic = document.querySelector("#img1");
+      pic.src = data.avatar.large;
+      getDets11();
+    });
+}
+
+function getDets11() {
+  fetch(playUrl11)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      title1.textContent = data.name;
+      cardBody1.textContent = "Artist: " + data.username;
+      cardGenre1.textContent = "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music11;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      cardGenre1.append(player);
+      getPic12();
+    });
+}
+
+function getPic12() {
+  fetch(picUrl12)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content2");
+      var pic = document.querySelector("#img2");
+      pic.src = data.avatar.large;
+      getDets12();
+    });
+}
+
+function getDets12() {
+  fetch(playUrl12)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title2").textContent = data.name;
+      document.querySelector("#card-body2").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre2").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music12;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre2").append(player);
+      getPic13();
+    });
+}
+
+function getPic13() {
+  fetch(picUrl13)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content3");
+      var pic = document.querySelector("#img3");
+      pic.src = data.avatar.large;
+      getDets13();
+    });
+}
+
+function getDets13() {
+  fetch(playUrl13)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title3").textContent = data.name;
+      document.querySelector("#card-body3").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre3").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music13;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre3").append(breaker, player);
+      getPic14();
+    });
+}
+
+function getPic14() {
+  fetch(picUrl14)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content4");
+      var pic = document.querySelector("#img4");
+      pic.src = data.avatar.large;
+      getDets14();
+    });
+}
+
+function getDets14() {
+  fetch(playUrl14)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title4").textContent = data.name;
+      document.querySelector("#card-body4").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre4").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music14;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre4").append(breaker, player);
+      getPic15();
+    });
+}
+
+function getPic15() {
+  fetch(picUrl15)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content5");
+      var pic = document.querySelector("#img5");
+      pic.src = data.avatar.large;
+      getDets15();
+    });
+}
+
+function getDets15() {
+  fetch(playUrl15)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title5").textContent = data.name;
+      document.querySelector("#card-body5").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre5").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music15;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre5").append(breaker, player);
+    });
+}
+
+// ELEVENTH SONG
+fetch(playUrl11)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music11 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic11() {
+    fetch(playUrl11)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music11.paused) {
+          music11.play();
+        } else {
+          music11.pause();
+        }
+      });
+}
+
+// TWELTH SONG
+fetch(playUrl12)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music12 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic12() {
+    fetch(playUrl12)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music12.paused) {
+          music12.play();
+        } else {
+          music12.pause();
+        }
+      });
+}
+
+// THIRTEENTH SONG
+fetch(playUrl13)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music13 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic13() {
+    fetch(playUrl13)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music13.paused) {
+          music13.play();
+        } else {
+          music13.pause();
+        }
+      });
+}
+
+// FOURTTEENTH SONG
+fetch(playUrl14)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music14 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic14() {
+    fetch(playUrl14)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music14.paused) {
+          music14.play();
+        } else {
+          music14.pause();
+        }
+      });
+}
+
+// FIFTEENTH SONG
+fetch(playUrl15)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music15 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic15() {
+    fetch(playUrl15)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music15.paused) {
+          music15.play();
+        } else {
+          music15.pause();
+        }
+      });
+}
 // ****** --- END OF CONFIDENT PAGE --- *****
 
+function getPic16() {
+  fetch(picUrl16)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content1");
+      var pic = document.querySelector("#img1");
+      pic.src = data.avatar.large;
+      getDets16();
+    });
+}
+
+function getDets16() {
+  fetch(playUrl16)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      title1.textContent = data.name;
+      cardBody1.textContent = "Artist: " + data.username;
+      cardGenre1.textContent = "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music16;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      cardGenre1.append(player);
+      getPic17();
+    });
+}
+
+function getPic17() {
+  fetch(picUrl17)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content2");
+      var pic = document.querySelector("#img2");
+      pic.src = data.avatar.large;
+      getDets17();
+    });
+}
+
+function getDets17() {
+  fetch(playUrl17)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title2").textContent = data.name;
+      document.querySelector("#card-body2").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre2").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music17;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre2").append(player);
+      getPic18();
+    });
+}
+
+function getPic18() {
+  fetch(picUrl18)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content3");
+      var pic = document.querySelector("#img3");
+      pic.src = data.avatar.large;
+      getDets18();
+    });
+}
+
+function getDets18() {
+  fetch(playUrl18)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title3").textContent = data.name;
+      document.querySelector("#card-body3").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre3").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music18;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre3").append(breaker, player);
+      getPic19();
+    });
+}
+
+function getPic19() {
+  fetch(picUrl19)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content4");
+      var pic = document.querySelector("#img4");
+      pic.src = data.avatar.large;
+      getDets19();
+    });
+}
+
+function getDets19() {
+  fetch(playUrl19)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title4").textContent = data.name;
+      document.querySelector("#card-body4").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre4").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music19;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre4").append(breaker, player);
+      getPic20();
+    });
+}
+
+function getPic20() {
+  fetch(picUrl20)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content5");
+      var pic = document.querySelector("#img5");
+      pic.src = data.avatar.large;
+      getDets20();
+    });
+}
+
+function getDets20() {
+  fetch(playUrl20)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title5").textContent = data.name;
+      document.querySelector("#card-body5").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre5").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music20;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre5").append(breaker, player);
+    });
+}
+
+// SIXTEENTH SONG
+fetch(playUrl16)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music16 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic16() {
+    fetch(playUrl16)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music16.paused) {
+          music16.play();
+        } else {
+          music16.pause();
+        }
+      });
+}
+
+// SEVENTEENTH SONG
+fetch(playUrl17)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music17 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic12() {
+    fetch(playUrl17)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music17.paused) {
+          music17.play();
+        } else {
+          music17.pause();
+        }
+      });
+}
+
+// EIGHTEENTH SONG
+fetch(playUrl18)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music18 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic18() {
+    fetch(playUrl18)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music18.paused) {
+          music18.play();
+        } else {
+          music18.pause();
+        }
+      });
+}
+
+// NINETEENTH SONG
+fetch(playUrl19)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music19 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic19() {
+    fetch(playUrl19)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music19.paused) {
+          music19.play();
+        } else {
+          music19.pause();
+        }
+      });
+}
+
+// TWENTIETH SONG
+fetch(playUrl20)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music20 = data.previews["preview-hq-mp3"];
+  });
+
+  function playMusic20() {
+    fetch(playUrl20)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        if (music20.paused) {
+          music20.play();
+        } else {
+          music20.pause();
+        }
+      });
+}
 // ****** --- END OF CALM PAGE --- ******
 
 // ****** --- END OF AMPED PAGE --- *******
@@ -696,26 +1298,436 @@ const btnCalm = document.getElementById("calm");
 const btnAmped = document.getElementById("amped");
 const btnRandom = document.getElementById("random");
 
+var elem1 = document.getElementById("card1");
+var elem2 = document.getElementById("card2");
+var elem3 = document.getElementById("card3");
+var elem4 = document.getElementById("card4");
+var elem5 = document.getElementById("card5");
+
 function showHappy() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+     {transform: 'scale(1)', background: 'black', opacity: 1},
+     {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+     {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+  ], {
+    duration: 3000,
+    easing: 'linear',
+    delay: 10,
+    iterations: 1,
+    direction: 'normal',
+    fill: 'forwards'
+  });
+
+  elem2.animate([
+    {transform: 'scale(1)', background: 'black', opacity: 1},
+    {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+    {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+ ], {
+   duration: 4000,
+   easing: 'linear',
+   delay: 10,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem3.animate([
+  {transform: 'scale(1)', background: 'black', opacity: 1},
+  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+  {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+], {
+ duration: 5000,
+ easing: 'linear',
+ delay: 10,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem4.animate([
+  {transform: 'scale(1)', background: 'black', opacity: 1},
+  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+  {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+], {
+ duration: 6000,
+ easing: 'linear',
+ delay: 10,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem5.animate([
+  {transform: 'scale(1)', background: 'black', opacity: 1},
+  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+  {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+], {
+ duration: 7000,
+ easing: 'linear',
+ delay: 10,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
 }
 
 function showSad() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+    {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+    {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+ ], {
+   duration: 2500,
+   easing: 'linear',
+   delay: 10,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem2.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+], {
+  duration: 2500,
+  easing: 'linear',
+  delay: 10,
+  iterations: 1,
+  direction: 'normal',
+  fill: 'forwards'
+});
+
+elem3.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+], {
+duration: 2500,
+easing: 'linear',
+delay: 10,
+iterations: 1,
+direction: 'normal',
+fill: 'forwards'
+});
+
+elem4.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+], {
+duration: 2500,
+easing: 'linear',
+delay: 10,
+iterations: 1,
+direction: 'normal',
+fill: 'forwards'
+});
+
+elem5.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 300px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+], {
+duration: 2500,
+easing: 'linear',
+delay: 10,
+iterations: 1,
+direction: 'normal',
+fill: 'forwards'
+});
 }
 
 function showConfident() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+    {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+    {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+ ], {
+   duration: 1500,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem2.animate([
+  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+], {
+ duration: 1500,
+ easing: 'linear',
+ delay: 1500,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem3.animate([
+  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+], {
+ duration: 1500,
+ easing: 'linear',
+ delay: 3000,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem4.animate([
+  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+], {
+ duration: 1500,
+ easing: 'linear',
+ delay: 4500,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem5.animate([
+  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+], {
+ duration: 1500,
+ easing: 'linear',
+ delay: 7000,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
 }
 
 function showCalm() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'green'},
+ ], {
+   duration: 4000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem2.animate([
+  {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'green'},
+], {
+ duration: 4000,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem3.animate([
+  {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'green'},
+], {
+ duration: 4000,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem4.animate([
+  {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'green'},
+], {
+ duration: 4000,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem5.animate([
+  {opacity: .2, background: 'gray'},
+  {opacity: .4},
+  {opacity: .6},
+  {opacity: .8},
+  {opcaity: 1, background: 'green'},
+], {
+ duration: 4000,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});  
 }
 
 function showAmped() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+  elem2.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+  elem3.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+  elem4.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+  elem5.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+
 }
 
 function showRandom() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+    {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+    {transform: 'translate(0px, 0px', background: 'black', opcaity: 1},
+ ], {
+   duration: 2500,
+   easing: 'linear',
+   delay: 10,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem2.animate([
+  {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'black'},
+], {
+ duration: 2500,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem3.animate([
+  {transform: 'scale(1)', background: 'black', opacity: 1},
+  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+  {transform: 'scale(1) rotate(0deg)', background: 'black', opcaity: 1},
+], {
+ duration: 2500,
+ easing: 'linear',
+ delay: 10,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem4.animate([
+  {transform: 'scale(1))', background: 'black', opacity: 1},
+  {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+  {transform: 'scale(1)', background: 'black', opcaity: 1},
+], {
+ duration: 2500,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem5.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 300px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'black', opcaity: 1},
+], {
+duration: 2500,
+easing: 'linear',
+delay: 10,
+iterations: 1,
+direction: 'normal',
+fill: 'forwards'
+});
 }
