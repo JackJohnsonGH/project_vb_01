@@ -10,7 +10,7 @@ var cardGenre1 = document.querySelector("#card-genre1");
 var cardContainer = document.querySelector(".card-container");
 var breaker = document.createElement("br");
 var userUrl = "https://freesound.org/apiv2/users/";
-var apiKey = "ELptJk3uxFNf0EIbrCQTL6C3nalxj50aJCQ312on";
+var apiKey = "Kn78OtOq7zbbpSf6jlYB9AQI4e9YBu18JuRR2L5B";
 
 // HAPPY
 var picUrl1 = "https://freesound.org/apiv2/users/Migfus20/?token=" + apiKey;
@@ -89,8 +89,10 @@ function getPic1() {
       var picContent = document.querySelector("#card-content1");
       var pic = document.querySelector("#img1");
       pic.src = data.avatar.large;
-      //   document.querySelector("#card1").backgroudImage = "black";
-      //   document.querySelector(".card").style.backgroudSize = "cover";
+      console.log(data.avatar.large);
+      //   document.querySelector("#card1").style.backgroundImage =
+      //     data.avatar.large;
+      //   document.querySelector(".card").style.backgroundSize = "cover";
       getDets1();
     });
 }
@@ -646,6 +648,15 @@ function pickRandom() {
   }
   if (random === "sad") {
     getPic6();
+  }
+  if (random === "confident") {
+    getPic11();
+  }
+  if (random === "calm") {
+    getPic16();
+  }
+  if (random === "amped") {
+    getPic21();
   } else {
     console.log("try again");
   }
