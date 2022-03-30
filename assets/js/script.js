@@ -1706,7 +1706,7 @@ elem3.animate([
 });
 
 elem4.animate([
-  {transform: 'scale(1))', background: 'black', opacity: 1},
+  {transform: 'scale(1)', background: 'black', opacity: 1},
   {transform: 'scale(1.5)', background: 'gray', opacity: .5},
   {transform: 'scale(1)', background: 'black', opcaity: 1},
 ], {
