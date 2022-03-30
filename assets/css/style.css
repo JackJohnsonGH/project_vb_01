@@ -128,7 +128,6 @@ body {
     font-family: 'Roboto Mono', monospace;
     display: grid;
     color: var(--white-color);
-    background-image: url(../images/sample\ background.webp);
     background-size: cover;
     padding: 7rem 0 0;
     max-width: 35ch;
