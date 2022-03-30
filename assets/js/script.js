@@ -665,26 +665,436 @@ const btnCalm = document.getElementById("calm");
 const btnAmped = document.getElementById("amped");
 const btnRandom = document.getElementById("random");
 
+var elem1 = document.getElementById("card1");
+var elem2 = document.getElementById("card2");
+var elem3 = document.getElementById("card3");
+var elem4 = document.getElementById("card4");
+var elem5 = document.getElementById("card5");
+
 function showHappy() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+     {transform: 'scale(1)', background: 'black', opacity: 1},
+     {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+     {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+  ], {
+    duration: 3000,
+    easing: 'linear',
+    delay: 10,
+    iterations: 1,
+    direction: 'normal',
+    fill: 'forwards'
+  });
+
+  elem2.animate([
+    {transform: 'scale(1)', background: 'black', opacity: 1},
+    {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+    {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+ ], {
+   duration: 4000,
+   easing: 'linear',
+   delay: 10,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem3.animate([
+  {transform: 'scale(1)', background: 'black', opacity: 1},
+  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+  {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+], {
+ duration: 5000,
+ easing: 'linear',
+ delay: 10,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem4.animate([
+  {transform: 'scale(1)', background: 'black', opacity: 1},
+  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+  {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+], {
+ duration: 6000,
+ easing: 'linear',
+ delay: 10,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem5.animate([
+  {transform: 'scale(1)', background: 'black', opacity: 1},
+  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+  {transform: 'scale(1) rotate(0deg)', background: 'yellow', opcaity: 1},
+], {
+ duration: 7000,
+ easing: 'linear',
+ delay: 10,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
 }
 
 function showSad() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+    {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+    {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+ ], {
+   duration: 2500,
+   easing: 'linear',
+   delay: 10,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem2.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+], {
+  duration: 2500,
+  easing: 'linear',
+  delay: 10,
+  iterations: 1,
+  direction: 'normal',
+  fill: 'forwards'
+});
+
+elem3.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+], {
+duration: 2500,
+easing: 'linear',
+delay: 10,
+iterations: 1,
+direction: 'normal',
+fill: 'forwards'
+});
+
+elem4.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+], {
+duration: 2500,
+easing: 'linear',
+delay: 10,
+iterations: 1,
+direction: 'normal',
+fill: 'forwards'
+});
+
+elem5.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 300px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'blue', opcaity: 1},
+], {
+duration: 2500,
+easing: 'linear',
+delay: 10,
+iterations: 1,
+direction: 'normal',
+fill: 'forwards'
+});
 }
 
 function showConfident() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+    {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+    {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+ ], {
+   duration: 1500,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem2.animate([
+  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+], {
+ duration: 1500,
+ easing: 'linear',
+ delay: 1500,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem3.animate([
+  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+], {
+ duration: 1500,
+ easing: 'linear',
+ delay: 3000,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem4.animate([
+  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+], {
+ duration: 1500,
+ easing: 'linear',
+ delay: 4500,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem5.animate([
+  {transform: 'skew(0deg,0deg)', background: 'black', opacity: 1},
+  {transform: 'skew(50deg, 55deg)', background: 'gray', opacity: .5},
+  {transform: 'skew(0deg, 0deg)', background: 'pink', opcaity: 1},
+], {
+ duration: 1500,
+ easing: 'linear',
+ delay: 7000,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
 }
 
 function showCalm() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'green'},
+ ], {
+   duration: 4000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem2.animate([
+  {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'green'},
+], {
+ duration: 4000,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem3.animate([
+  {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'green'},
+], {
+ duration: 4000,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem4.animate([
+  {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'green'},
+], {
+ duration: 4000,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem5.animate([
+  {opacity: .2, background: 'gray'},
+  {opacity: .4},
+  {opacity: .6},
+  {opacity: .8},
+  {opcaity: 1, background: 'green'},
+], {
+ duration: 4000,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});  
 }
 
 function showAmped() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+  elem2.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+  elem3.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+  elem4.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+  elem5.animate([
+    {transform: 'scale(1))', background: 'black', opacity: 1},
+    {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+    {transform: 'scale(1)', background: 'purple', opcaity: 1},
+  ], {
+   duration: 1000,
+   easing: 'linear',
+   delay: 0,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+  });
+
+
 }
 
 function showRandom() {
   targetDiv.classList.remove("hide");
+
+  elem1.animate([
+    {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+    {transform: 'translate(100px, 100px) rotate(-200deg)', background: 'gray', opacity: .5},
+    {transform: 'translate(0px, 0px', background: 'black', opcaity: 1},
+ ], {
+   duration: 2500,
+   easing: 'linear',
+   delay: 10,
+   iterations: 1,
+   direction: 'normal',
+   fill: 'forwards'
+ });
+
+ elem2.animate([
+  {opacity: .2, background: 'gray'},
+    {opacity: .4},
+    {opacity: .6},
+    {opacity: .8},
+    {opcaity: 1, background: 'black'},
+], {
+ duration: 2500,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem3.animate([
+  {transform: 'scale(1)', background: 'black', opacity: 1},
+  {transform: 'scale(.5) rotate(270deg)', background: 'blue', opacity: .5},
+  {transform: 'scale(1) rotate(0deg)', background: 'black', opcaity: 1},
+], {
+ duration: 2500,
+ easing: 'linear',
+ delay: 10,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem4.animate([
+  {transform: 'scale(1))', background: 'black', opacity: 1},
+  {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+  {transform: 'scale(1)', background: 'black', opcaity: 1},
+], {
+ duration: 2500,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+
+elem5.animate([
+  {transform: 'translate(0px, 0px)', background: 'black', opacity: 1},
+  {transform: 'translate(100px, 300px) rotate(-200deg)', background: 'gray', opacity: .5},
+  {transform: 'translate(0px, 0px', background: 'black', opcaity: 1},
+], {
+duration: 2500,
+easing: 'linear',
+delay: 10,
+iterations: 1,
+direction: 'normal',
+fill: 'forwards'
+});
 }

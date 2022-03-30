@@ -127,6 +127,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 10px;
+  position: relative;
 }
 
 .card {
