@@ -98,21 +98,32 @@ document.addEventListener("DOMContentLoaded", () => {
         switch (button.id) {
           case "happy":
             getPic1();
+            localStorage.clear();
+            localStorage.setItem("mood", "happy");
             break;
           case "sad":
             getPic6();
+            localStorage.clear();
+            localStorage.setItem("mood", "sad");
             break;
           case "confident":
             getPic11();
+            localStorage.clear();
+            localStorage.setItem("mood", "confident");
             break;
           case "calm":
             getPic16();
+            localStorage.clear();
+            localStorage.setItem("mood", "calm");
             break;
           case "amped":
             getPic21();
+            localStorage.clear();
+            localStorage.setItem("mood", "amped");
             break;
           case "random":
             pickRandom();
+            localStorage.clear();
             break;
         }
       });
@@ -1858,6 +1869,20 @@ function showRandom() {
     }
   );
 
+<<<<<<< HEAD
+elem4.animate([
+  {transform: 'scale(1)', background: 'black', opacity: 1},
+  {transform: 'scale(1.5)', background: 'gray', opacity: .5},
+  {transform: 'scale(1)', background: 'black', opcaity: 1},
+], {
+ duration: 2500,
+ easing: 'linear',
+ delay: 0,
+ iterations: 1,
+ direction: 'normal',
+ fill: 'forwards'
+});
+=======
   elem4.animate(
     [
       { transform: "scale(1)", background: "black", opacity: 1 },
@@ -1873,6 +1898,7 @@ function showRandom() {
       fill: "forwards",
     }
   );
+>>>>>>> bb1786b4deacfe6a8e068df8c141ad69313c82c7
 
   elem5.animate(
     [
@@ -1894,3 +1920,33 @@ function showRandom() {
     }
   );
 }
+
+function loadMood() {
+  if (localStorage.mood === "happy") {
+    targetDiv.classList.remove("hide");
+    getPic1();
+    showHappy();
+  }
+  if (localStorage.mood === "sad") {
+    targetDiv.classList.remove("hide");
+    getPic6();
+    showSad();
+  }
+  if (localStorage.mood === "confident") {
+    targetDiv.classList.remove("hide");
+    getPic11();
+    showConfident();
+  }
+  if (localStorage.mood === "calm") {
+    targetDiv.classList.remove("hide");
+    getPic16();
+    showCalm();
+  }
+  if (localStorage.mood === "amped") {
+    targetDiv.classList.remove("hide");
+    getPic21();
+    showAmped();
+  }
+}
+
+loadMood();
