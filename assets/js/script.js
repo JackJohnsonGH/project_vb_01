@@ -1855,20 +1855,6 @@ function showRandom() {
     }
   );
 
-<<<<<<< HEAD
-elem4.animate([
-  {transform: 'scale(1)', background: 'black', opacity: 1},
-  {transform: 'scale(1.5)', background: 'gray', opacity: .5},
-  {transform: 'scale(1)', background: 'black', opcaity: 1},
-], {
- duration: 2500,
- easing: 'linear',
- delay: 0,
- iterations: 1,
- direction: 'normal',
- fill: 'forwards'
-});
-=======
   elem4.animate(
     [
       { transform: "scale(1)", background: "black", opacity: 1 },
@@ -1884,7 +1870,6 @@ elem4.animate([
       fill: "forwards",
     }
   );
->>>>>>> bb1786b4deacfe6a8e068df8c141ad69313c82c7
 
   elem5.animate(
     [
