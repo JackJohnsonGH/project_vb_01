@@ -44,6 +44,13 @@ var picUrl19 =
 var picUrl20 =
   "https://freesound.org/apiv2/users/frederic.font/?token=" + apiKey;
 
+// AMPED
+var picUrl21 = "" + apiKey;
+var picUrl22 = "" + apiKey; 
+var picUrl23 = "" + apiKey; 
+var picUrl24 = "" + apiKey; 
+var picUrl25 = "" + apiKey; 
+
 // HAPPY
 var playUrl1 = "https://freesound.org/apiv2/sounds/560446/?token=" + apiKey;
 var playUrl2 = "https://freesound.org/apiv2/sounds/609562/?token=" + apiKey;
@@ -71,6 +78,13 @@ var playUrl17 = "https://freesound.org/apiv2/sounds/595108/?token=" + apiKey;
 var playUrl18 = "https://freesound.org/apiv2/sounds/278201/?token=" + apiKey;
 var playUrl19 = "https://freesound.org/apiv2/sounds/512929/?token=" + apiKey;
 var playUrl20 = "https://freesound.org/apiv2/sounds/130878/?token=" + apiKey;
+
+// AMPED
+var playUrl21 = "" + apiKey; 
+var playUrl22 = "" + apiKey; 
+var playUrl23 = "" + apiKey; 
+var playUrl24 = "" + apiKey; 
+var playUrl25 = "" + apiKey; 
 
 var testUrl =
   "https://freesound.org/apiv2/search/text/?query=happy&token=" + apiKey;
