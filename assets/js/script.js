@@ -1293,7 +1293,7 @@ function getDets21() {
       player.classList = "player";
       player.setAttribute("controls", true);
       cardGenre1.append(player);
-      getPic21();
+      getPic22();
     });
 }
 
@@ -1306,7 +1306,7 @@ function getPic22() {
       var picContent = document.querySelector("#card-content2");
       var pic = document.querySelector("#img2");
       pic.src = data.avatar.large;
-      getDets23();
+      getDets22();
     });
 }
 
