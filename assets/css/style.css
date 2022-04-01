@@ -13,6 +13,10 @@
   --green-color: #18d545;
 }
 
+body {
+  background-color: #575353;
+}
+
 *,
 *::before *::after {
   box-sizing: border-box;
@@ -211,6 +215,10 @@ body {
 .btn:hover,
 .btn:focus {
   background-color: grey;
+}
+
+footer {
+  color: white;
 }
 
 @media (hover) {
