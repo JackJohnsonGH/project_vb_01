@@ -81,7 +81,7 @@ var playUrl20 = "https://freesound.org/apiv2/sounds/130878/?token=" + apiKey;
 
 // AMPED
 var playUrl21 = "https://freesound.org/apiv2/sounds/482012/?token=" + apiKey; 
-var playUrl22 = "https://freesound.org/apiv2/sounds/577940//?token=" + apiKey; 
+var playUrl22 = "https://freesound.org/apiv2/sounds/577940/?token=" + apiKey; 
 var playUrl23 = "https://freesound.org/apiv2/sounds/45982/?token=" + apiKey; 
 var playUrl24 = "https://freesound.org/apiv2/sounds/539959/?token=" + apiKey; 
 var playUrl25 = "https://freesound.org/apiv2/sounds/43536/?token=" + apiKey; 
@@ -1463,8 +1463,6 @@ fetch(playUrl22)
   });
 
 function playMusic22() {
-  var audios = document.getElementsByTagName("audio");
-  console.log(audios);
   fetch(playUrl22)
     .then(function (response) {
       return response.json();
@@ -1491,8 +1489,6 @@ fetch(playUrl23)
   });
 
 function playMusic23() {
-  var audios = document.getElementsByTagName("audio");
-  console.log(audios);
   fetch(playUrl23)
     .then(function (response) {
       return response.json();
@@ -2019,7 +2015,7 @@ function showAmped() {
 
   elem1.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
@@ -2035,7 +2031,7 @@ function showAmped() {
 
   elem2.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
@@ -2051,7 +2047,7 @@ function showAmped() {
 
   elem3.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
@@ -2067,7 +2063,7 @@ function showAmped() {
 
   elem4.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
@@ -2083,7 +2079,7 @@ function showAmped() {
 
   elem5.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
