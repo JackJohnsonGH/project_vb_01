@@ -7,8 +7,6 @@ Choose Your Mood app consists of 5 moods and 5 songs for each mood, and a random
 
 ![screenshot](./assets/images/animations.png)
 
-![screenshot](./)
-
 ## Tech
 This app uses HTML, CSS and vanilla JavaScript.
 
