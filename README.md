@@ -16,7 +16,7 @@ This app uses [GoogleFonts API](https://developers.google.com/fonts) and [FreeSo
 
 ## Live Website
 
-![link](https://jackjohnsongh.github.io/project_vb_01/)
+(https://jackjohnsongh.github.io/project_vb_01/)
 
 ### Contributors 
 [Jack Johnson](https://github.com/JackJohnsonGH), [Michael Kendrick](https://github.com/swazunga), [Davon Brown](https://github.com/DavonHB)
