@@ -217,6 +217,10 @@ body {
   background-color: grey;
 }
 
+footer {
+  color: white;
+}
+
 @media (hover) {
   .card-content {
     transform: translateY(60%);
