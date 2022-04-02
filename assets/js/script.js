@@ -45,11 +45,11 @@ var picUrl20 =
   "https://freesound.org/apiv2/users/frederic.font/?token=" + apiKey;
 
 // AMPED
-var picUrl21 = "" + apiKey;
-var picUrl22 = "" + apiKey; 
-var picUrl23 = "" + apiKey; 
-var picUrl24 = "" + apiKey; 
-var picUrl25 = "" + apiKey; 
+var picUrl21 = "https://freesound.org/apiv2/users/Infinita08/?token=" + apiKey;
+var picUrl22 = "https://freesound.org/apiv2/users/dpren/?token=" + apiKey; 
+var picUrl23 = "https://freesound.org/apiv2/users/torn.rugged.audio.35/?token=" + apiKey; 
+var picUrl24 = "https://freesound.org/apiv2/users/BaDoink/?token=" + apiKey; 
+var picUrl25 = "https://freesound.org/apiv2/users/mkoenig/?token=" + apiKey; 
 
 // HAPPY
 var playUrl1 = "https://freesound.org/apiv2/sounds/560446/?token=" + apiKey;
@@ -80,11 +80,11 @@ var playUrl19 = "https://freesound.org/apiv2/sounds/512929/?token=" + apiKey;
 var playUrl20 = "https://freesound.org/apiv2/sounds/130878/?token=" + apiKey;
 
 // AMPED
-var playUrl21 = "" + apiKey; 
-var playUrl22 = "" + apiKey; 
-var playUrl23 = "" + apiKey; 
-var playUrl24 = "" + apiKey; 
-var playUrl25 = "" + apiKey; 
+var playUrl21 = "https://freesound.org/apiv2/sounds/482012/?token=" + apiKey; 
+var playUrl22 = "https://freesound.org/apiv2/sounds/577940/?token=" + apiKey; 
+var playUrl23 = "https://freesound.org/apiv2/sounds/45982/?token=" + apiKey; 
+var playUrl24 = "https://freesound.org/apiv2/sounds/539959/?token=" + apiKey; 
+var playUrl25 = "https://freesound.org/apiv2/sounds/43536/?token=" + apiKey; 
 
 var testUrl =
   "https://freesound.org/apiv2/search/text/?query=happy&token=" + apiKey;
@@ -1265,6 +1265,292 @@ function playMusic20() {
 }
 // ****** --- END OF CALM PAGE --- ******
 
+function getPic21() {
+  fetch(picUrl21)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content1");
+      var pic = document.querySelector("#img1");
+      pic.src = data.avatar.large;
+      console.log(data.avatar.large);
+      getDets21();
+    });
+}
+
+function getDets21() {
+  fetch(playUrl21)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      title1.textContent = data.name;
+      cardBody1.textContent = "Artist: " + data.username;
+      cardGenre1.textContent = "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music21;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      cardGenre1.append(player);
+      getPic22();
+    });
+}
+
+function getPic22() {
+  fetch(picUrl22)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content2");
+      var pic = document.querySelector("#img2");
+      pic.src = data.avatar.large;
+      getDets22();
+    });
+}
+
+function getDets22() {
+  fetch(playUrl22)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title2").textContent = data.name;
+      document.querySelector("#card-body2").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre2").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music22;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre2").append(player);
+      getPic23();
+    });
+}
+
+function getPic23() {
+  fetch(picUrl23)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content3");
+      var pic = document.querySelector("#img3");
+      pic.src = data.avatar.large;
+      getDets23();
+    });
+}
+
+function getDets23() {
+  fetch(playUrl23)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title3").textContent = data.name;
+      document.querySelector("#card-body3").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre3").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music23;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre3").append(breaker, player);
+      getPic24();
+    });
+}
+
+function getPic24() {
+  fetch(picUrl24)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content4");
+      var pic = document.querySelector("#img4");
+      pic.src = data.avatar.large;
+      getDets24();
+    });
+}
+
+function getDets24() {
+  fetch(playUrl24)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title4").textContent = data.name;
+      document.querySelector("#card-body4").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre4").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music24;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre4").append(breaker, player);
+      getPic25();
+    });
+}
+
+function getPic25() {
+  fetch(picUrl25)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var picContent = document.querySelector("#card-content5");
+      var pic = document.querySelector("#img5");
+      pic.src = data.avatar.large;
+      getDets25();
+    });
+}
+
+function getDets25() {
+  fetch(playUrl25)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      document.querySelector("#card-title5").textContent = data.name;
+      document.querySelector("#card-body5").textContent =
+        "Artist: " + data.username;
+      document.querySelector("#card-genre5").textContent =
+        "Genre: " + data.tags[0];
+      var player = document.createElement("audio");
+      player.src = music25;
+      player.classList = "player";
+      player.setAttribute("controls", true);
+      document.querySelector("#card-genre5").append(breaker, player);
+    });
+}
+
+// 21ST SONG
+fetch(playUrl21)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music21 = data.previews["preview-hq-mp3"];
+  });
+
+function playMusic21() {
+  fetch(playUrl21)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      if (music21.paused) {
+        music21.play();
+      } else {
+        console.log("pause");
+        music21.pause();
+      }
+    });
+}
+
+// 22ND SONG
+fetch(playUrl22)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music22 = data.previews["preview-hq-mp3"];
+  });
+
+function playMusic22() {
+  fetch(playUrl22)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      if (music22.paused) {
+        music22.play();
+        console.log(music22.paused);
+      } else {
+        console.log("pause");
+        music22.pause();
+      }
+    });
+}
+
+// 23RD SONG
+fetch(playUrl23)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music23 = data.previews["preview-hq-mp3"];
+  });
+
+function playMusic23() {
+  fetch(playUrl23)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      if (music23.paused) {
+        music21.play();
+        console.log(music23.paused);
+      } else {
+        console.log("pause");
+        music23.pause();
+      }
+    });
+}
+
+// 24TH SONG
+fetch(playUrl24)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music24 = data.previews["preview-hq-mp3"];
+  });
+
+function playMusic24() {
+  fetch(playUrl24)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music24.paused) {
+        music24.play();
+      } else {
+        music24.pause();
+      }
+    });
+}
+
+// 25TH SONG
+fetch(playUrl25)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    music25 = data.previews["preview-hq-mp3"];
+  });
+
+function playMusic25() {
+  fetch(playUrl25)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      if (music25.paused) {
+        music25.play();
+      } else {
+        music25.pause();
+      }
+    });
+}
+
 // ****** --- END OF AMPED PAGE --- *******
 
 // RANDOM FUNCTION
@@ -1729,7 +2015,7 @@ function showAmped() {
 
   elem1.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
@@ -1745,7 +2031,7 @@ function showAmped() {
 
   elem2.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
@@ -1761,7 +2047,7 @@ function showAmped() {
 
   elem3.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
@@ -1777,7 +2063,7 @@ function showAmped() {
 
   elem4.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
@@ -1793,7 +2079,7 @@ function showAmped() {
 
   elem5.animate(
     [
-      { transform: "scale(1))", background: "black", opacity: 1 },
+      { transform: "scale(1)", background: "black", opacity: 1 },
       { transform: "scale(1.5)", background: "gray", opacity: 0.5 },
       { transform: "scale(1)", background: "purple", opcaity: 1 },
     ],
